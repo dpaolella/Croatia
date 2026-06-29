@@ -278,11 +278,53 @@
   .foot{padding:38px 0 70px;color:var(--muted-2);font-size:.83rem;line-height:1.6}
   .foot p{margin:.5em 0;max-width:92ch}
 
+  /* ---------- clickable photos + lightbox ---------- */
+  .ph{cursor:zoom-in}
+  .ph-zoom{position:absolute;top:8px;right:8px;width:27px;height:27px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(8,28,40,.55);color:#fff;font-size:.8rem;opacity:0;transition:opacity .2s ease;z-index:2}
+  .ph:hover .ph-zoom,.ph:focus-visible .ph-zoom{opacity:1}
+  .ph:focus-visible{outline:3px solid var(--sea-mid);outline-offset:2px}
+  .ph.noimg{cursor:default}
+  .ph.noimg .ph-zoom{display:none}
+  .lb{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;background:rgba(8,18,26,.88);padding:24px;animation:lbfade .18s ease}
+  .lb[hidden]{display:none}
+  @keyframes lbfade{from{opacity:0}to{opacity:1}}
+  .lb-fig{margin:0;max-width:94vw;display:flex;flex-direction:column;align-items:center;gap:12px}
+  .lb-fig img{max-width:94vw;max-height:82vh;object-fit:contain;border-radius:6px;box-shadow:0 30px 80px -20px rgba(0,0,0,.7);background:#0e2230}
+  .lb-fig figcaption{color:#EAF2F6;font-family:var(--label);text-transform:uppercase;letter-spacing:.08em;font-size:.74rem;text-align:center}
+  .lb-close{position:fixed;top:16px;right:18px;width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;font-size:1.5rem;line-height:1;cursor:pointer;transition:background .15s ease}
+  .lb-close:hover{background:rgba(255,255,255,.26)}
+  .lb-close:focus-visible{outline:3px solid var(--turq);outline-offset:2px}
+
+  /* ---------- mode pills / transport ---------- */
+  .mpill{display:inline-flex;align-items:center;gap:4px;margin-left:9px;font-family:var(--label);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:.6rem;color:#fff;background:var(--m,#677078);padding:3px 7px;border-radius:100px;vertical-align:middle;white-space:nowrap}
+  .rtransport{font-family:var(--label);text-transform:uppercase;letter-spacing:.07em;font-size:.7rem;color:var(--turq);margin-top:8px;font-weight:600}
+  .flag{display:inline-block;margin-left:10px;font-family:var(--label);text-transform:uppercase;letter-spacing:.1em;font-size:.64rem;font-weight:700;color:var(--sea-mid);background:#EAF1F3;border:1px solid #CADDE4;border-radius:100px;padding:4px 11px;vertical-align:middle}
+
+  /* ---------- car-or-boat compare ---------- */
+  .compare{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:6px 0 18px}
+  .cmp{border:1px solid var(--stone-line);border-radius:8px;padding:20px 22px}
+  .cmp.car{background:linear-gradient(180deg,#FBF6F1,#FAF3EC);border-color:#E8CFBF}
+  .cmp.boat{background:linear-gradient(180deg,#EFF5F7,#E9F1F3);border-color:#C5DBE3}
+  .cmp h3{font-family:var(--display);font-weight:500;font-size:1.2rem;margin:0 0 6px;letter-spacing:-.01em}
+  .cmp-cost{font-family:var(--display);font-weight:600;font-size:1.5rem;color:var(--sea-deep);line-height:1.05;margin-bottom:12px}
+  .cmp-cost span{display:block;font-family:var(--label);text-transform:uppercase;letter-spacing:.1em;font-size:.6rem;font-weight:700;color:var(--muted);margin-top:5px}
+  .cmp ul{margin:0 0 12px;padding-left:18px}
+  .cmp li{font-size:.89rem;color:#33404a;margin:3px 0}
+  .cmp-note{margin:0;font-size:.89rem;color:#3a4750}
+  .needs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:4px 0 0}
+  .needs-col{border:1px solid var(--stone-line);border-radius:8px;padding:16px 20px;background:var(--paper-2)}
+  .needs-col h4{font-family:var(--label);text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;margin:0 0 8px;font-weight:700;display:flex;align-items:center;gap:8px}
+  .needs-col.car h4{color:var(--terra)}
+  .needs-col.free h4{color:var(--sea-mid)}
+  .needs-col ul{margin:0;padding-left:18px}
+  .needs-col li{font-size:.91rem;color:#33404a;margin:4px 0}
+
   /* ---------- responsive ---------- */
   @media (max-width:860px){
     .cards{grid-template-columns:1fr}
     .food-grid,.logi-grid,.rec-points{grid-template-columns:1fr}
     .crew{grid-template-columns:repeat(4,1fr)}
+    .compare,.needs{grid-template-columns:1fr}
   }
   @media (max-width:560px){
     body{font-size:16px}
@@ -353,7 +395,7 @@
     <div class="wrap">
       <div class="sec-head">
         <div class="eyebrow">Everyone does this · Sept 19–21</div>
-        <h2>The Dubrovnik opening</h2>
+        <h2>The Dubrovnik opening <span class="flag">🚶 No car needed</span></h2>
       </div>
       <p class="lede">Three nights inside (or just outside) the walls, shared by all three routes. The first two days are quieter — solo or a small group — which is a gift: do the things that are nicer without a crowd. By the 21st the whole crew's in and you point the car north.</p>
 
@@ -420,6 +462,74 @@
           <div class="k">If you do exactly one nice dinner</div>
           <h5>Make it count — then back to the konobas</h5>
           <p>For a single splurge, <b>Restaurant 360</b> on the Dubrovnik ramparts or <b>LD Restaurant</b> on Korčula are the ones worth the white tablecloth. Otherwise: grilled fish, black risotto, peka, and a carafe of the house red. That's the trip.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ===== CAR OR BOAT ===== -->
+  <section id="transport">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Car or boat?</div>
+        <h2>How you actually get from Dubrovnik to Split</h2>
+      </div>
+      <p class="lede">You spotted it — you don't necessarily need a car. The mountain-and-coast route (A) really does, but you can also island-hop the whole way by catamaran (that's Route C, and a car-free version of B). Here's the trade-off, with rough one-way costs. Treat the numbers as ballpark figures to reconfirm for 2026.</p>
+
+      <div class="compare">
+        <div class="cmp car">
+          <h3>🚗 One-way rental</h3>
+          <div class="cmp-cost">~€200–350<span>total for the car</span></div>
+          <ul>
+            <li>Compact car, ~3 days (collect leaving Dubrovnik, drop at Split airport): <b>~€120–210</b></li>
+            <li>One-way drop fee: <b>~€0–60</b> (often small or waived within Croatia)</li>
+            <li>Fuel + tolls — the Pelješac Bridge is free: <b>~€35–55</b></li>
+            <li>Parking in towns: <b>~€10–20/day</b></li>
+          </ul>
+          <p class="cmp-note"><b>Priced per car, split by the group</b> — cheaper per head the more of you there are. It's the only way to reach Biokovo, Omiš, the Makarska Riviera beaches and the Pelješac wine road. Mind the Dubrovnik old-town fine and town parking.</p>
+        </div>
+        <div class="cmp boat">
+          <h3>⛴ Foot-passenger catamarans</h3>
+          <div class="cmp-cost">~€45–90<span>per person, one-way</span></div>
+          <ul>
+            <li>Dubrovnik → Korčula: <b>~€25–35 pp</b></li>
+            <li>Korčula → Split: <b>~€20–30 pp</b></li>
+            <li>Or one through Dubrovnik → Split fast boat (seasonal, via the islands): <b>~€40–60 pp</b></li>
+          </ul>
+          <p class="cmp-note"><b>Priced per person</b> — so it scales up with the group. No driving and gorgeous, but schedule-bound (late-September sailings thin out — confirm your dates), foot-passengers only, and you can't reach the mountain or coast stops without local buses or taxis.</p>
+        </div>
+      </div>
+
+      <div class="needs">
+        <div class="needs-col car">
+          <h4>🚗 Needs a car</h4>
+          <ul>
+            <li><b>Biokovo / Sveti Jure</b> — the big lookout (Route A)</li>
+            <li><b>Omiš</b> fort &amp; the Cetina canyon (A)</li>
+            <li><b>Makarska Riviera</b> beaches — Brela, Tučepi (A)</li>
+            <li><b>Ston</b> oyster stop &amp; the <b>Pelješac wine road</b></li>
+            <li><b>Trogir / Šibenik / Krka</b> day trips (B)</li>
+          </ul>
+        </div>
+        <div class="needs-col free">
+          <h4>🚶 No car needed</h4>
+          <ul>
+            <li><b>All of Dubrovnik</b> — Old Town, Srđ (cable car / bus / foot), Lokrum &amp; the Elaphiti by boat</li>
+            <li><b>Korčula &amp; Lumbarda</b> (C) — catamaran, then local bus, taxi or bike</li>
+            <li><b>Brač &amp; Hvar</b> (B) — catamaran straight from Split</li>
+            <li><b>Split itself</b> — palace, Riva, Marjan, markets, all on foot</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout blue" style="margin-top:18px">
+        <div class="ic">🧭</div>
+        <div>
+          <div class="k">Bottom line</div>
+          <h5>Roughly a wash for two or three of you — pick on style, not price</h5>
+          <p><b>Route A wants a car</b> (the mountain and coast stops are the whole point). <b>Route C is the easy car-free one</b> — catamaran Dubrovnik → Korčula → Split. <b>Route B works either way.</b> The car wins on flexibility and group cost; the boat wins on zero driving and scenery. With four-plus of you the car gets cheaper per head; as a pair, the boat is very competitive.</p>
         </div>
       </div>
     </div>
@@ -495,6 +605,14 @@
   </div>
 </main>
 
+<div id="lightbox" class="lb" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lb-close" aria-label="Close photo">&times;</button>
+  <figure class="lb-fig">
+    <img id="lb-img" alt="">
+    <figcaption id="lb-cap"></figcaption>
+  </figure>
+</div>
+
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 /* =========================================================
@@ -507,6 +625,15 @@ const CAT = {
   swim:   {label:"Swim", v:"--cat-swim"},
   gem:    {label:"Hidden gem", v:"--cat-gem"},
   logi:   {label:"On the road", v:"--cat-logi"},
+};
+
+/* how you get there, shown as a small pill on a slot */
+const MODE = {
+  car:   {i:"🚗", t:"Car", c:"#C2592C"},
+  boat:  {i:"⛴", t:"Boat", c:"#1D6A96"},
+  foot:  {i:"🚶", t:"On foot", c:"#677078"},
+  taxi:  {i:"🚕", t:"Taxi / bus", c:"#7C6A1E"},
+  either:{i:"🔄", t:"Car or boat", c:"#6E5A8E"},
 };
 
 /* who's coming when */
@@ -557,6 +684,11 @@ const FERRY_KOR_SPLIT = [[42.9610,17.1360],[43.05,16.90],[43.20,16.62],[43.35,16
 const FERRY_SPLIT_BOL = [[43.5081,16.4402],[43.42,16.55],[43.2620,16.6540]];
 const FERRY_SPLIT_HVAR = [[43.5081,16.4402],[43.33,16.45],[43.1720,16.4410]];
 
+/* driving waypoints (lat,lon) — OSRM routes the real roads between them at runtime */
+const VIA_A  = [[42.6407,18.1077],[42.8370,17.6990],[43.2970,17.0170],[43.4450,16.6890],[43.5081,16.4402]];
+const VIA_DS = [[42.6407,18.1077],[42.8370,17.6990],[43.5081,16.4402]];
+const VIA_C  = [[42.6407,18.1077],[42.8370,17.6990],[42.9750,17.1750]];
+
 const MC = {start:"#C2592C", end:"#0B3C5D", city:"#1D6A96", view:"#9C5A2A", swim:"#3F9CA8", gem:"#6E5A8E"};
 
 /* ---- the opening (Dubrovnik) ---- */
@@ -590,7 +722,7 @@ const OPENING = {
     {d:"20", dow:"Sat · Sep", place:"Your adventure day", note:"Still a small group — perfect for the things that are easier without the whole crew.",
      slots:[
        {when:"Morning", c:"view", t:"Up <b>Mount Srđ</b> (1,352 ft) for the definitive view over the red roofs and the Adriatic. Your pick of ways up: the zig-zag <b>Way of the Cross</b> trail (~1 hr on foot), the <b>cable car</b> (~4 min), or a taxi/bus — and come down however you like. <span style='color:#6b7780'>(If you're running, this is your hill.)</span>"},
-       {when:"Afternoon", c:"swim", t:"Down to the water. Two car-free favorites: the 15-min boat to <b>Lokrum</b> (shaded paths, a little saltwater swimming lake, free-roaming peacocks, rocky coves), or the ferry out to the <b>Elaphiti Islands</b>."},
+       {when:"Afternoon", c:"swim", m:"boat", t:"Down to the water. Two car-free favorites: the 15-min boat to <b>Lokrum</b> (shaded paths, a little saltwater swimming lake, free-roaming peacocks, rocky coves), or the ferry out to the <b>Elaphiti Islands</b>."},
        {when:"Evening", c:"gem", t:"Sunset drink at a <b>Buža</b> bar — a hole in the seaward wall with tables out on the cliffs — then a relaxed dinner in the lanes."},
      ]},
     {d:"21", dow:"Sun · Sep", place:"The crew's complete", note:"Friend ② arrives today. Time the big walk for before they land, or save it to do together.",
@@ -608,12 +740,13 @@ const ROUTES = {
     letter:"A", name:"Mountains & Coast", best:true,
     theme:"The coast road north — one big lookout at Biokovo, a fort over the Cetina at Omiš, finishing in Split.",
     route:"Dubrovnik → Makarska → Omiš → Split", fly:"In DBV · Out SPU",
+    transport:"🚗 Needs a car — one-way rental",
     tags:["Best fit","The coast drive","One big lookout","2 bases"],
     strip:["Dubrovnik","Ston","Makarska","Omiš","Split"],
     photos:["ston","peljesac","makarska","biokovo","omis","split"],
     map:{
       center:[43.05,17.30], zoom:9, fit:true,
-      routes:[{pts:COAST, color:"#C2592C", weight:4}],
+      routes:[{pts:COAST, road:true, via:VIA_A, color:"#C2592C", weight:4}],
       markers:[
         {pt:[42.6407,18.1077], label:"Dubrovnik", color:MC.start, perm:true},
         {pt:[42.8370,17.6990], label:"Ston · oysters & walls", color:MC.city},
@@ -629,19 +762,19 @@ const ROUTES = {
     days:[
       {d:"22", dow:"Mon · Sep", place:"The coast road north", note:"Collect the car and make the drive the day, not a transfer.",
        slots:[
-         {when:"Morning", c:"logi", t:"Pick up the <b>one-way rental</b> on your way out of Dubrovnik. Head up the coast toward the Pelješac peninsula — about <b>137 mi</b> total to Split, so take it slow."},
+         {when:"Morning", c:"logi", m:"car", t:"Pick up the <b>one-way rental</b> on your way out of Dubrovnik. Head up the coast toward the Pelješac peninsula — about <b>137 mi</b> total to Split, so take it slow."},
          {when:"Afternoon", c:"history", t:"Stop in <b>Ston</b> to walk a stretch of its <b>4-mi</b> defensive walls, then eat oysters pulled straight from the bay in <b>Mali Ston</b>. Cross the <b>Pelješac Bridge</b> (opened 2022 — no more Bosnia border) and roll into <b>Makarska</b>."},
          {when:"Evening", c:"food", t:"Seafront dinner in Makarska — grilled fish or a <b>brudet</b> (Dalmatian fish stew) at a no-frills konoba."},
        ]},
       {d:"23", dow:"Tue · Sep", place:"Biokovo, the big view", note:"The reason the route bends here. Go on a clear morning.",
        slots:[
-         {when:"Morning", c:"view", t:"Up <b>Biokovo</b>. Drive the timed-entry road to the glass <b>Skywalk</b> (4,029 ft) and on toward <b>Sveti Jure</b> (5,781 ft), with short steep walks at the top. Strong hikers can climb from the sea; everyone else drives most of it."},
+         {when:"Morning", c:"view", m:"car", t:"Up <b>Biokovo</b>. Drive the timed-entry road to the glass <b>Skywalk</b> (4,029 ft) and on toward <b>Sveti Jure</b> (5,781 ft), with short steep walks at the top. Strong hikers can climb from the sea; everyone else drives most of it."},
          {when:"Afternoon", c:"swim", t:"Back to sea level and into the water — the Makarska Riviera's prettiest pebble coves are at <b>Brela</b> and <b>Tučepi</b>. Easy, warm, low-70s°F swimming."},
          {when:"Evening", c:"food", t:"Order a <b>peka</b> ahead (meat or octopus slow-roasted under an iron bell — needs ~3 hrs) for a proper post-mountain feast."},
        ]},
       {d:"24", dow:"Wed · Sep", place:"Omiš, then into Split", note:"One last fort, then a living Roman palace.",
        slots:[
-         {when:"Morning", c:"view", t:"Short drive to <b>Omiš</b>, where the Cetina River cuts to the sea. Climb to the <b>Starigrad/Fortica</b> fort above the canyon (a 2–3 hr loop, 994 ft) or the quick 15-min <b>Mirabela</b> in town. Adrenaline option: a via ferrata or a river zipline."},
+         {when:"Morning", c:"view", m:"car", t:"Short drive to <b>Omiš</b>, where the Cetina River cuts to the sea. Climb to the <b>Starigrad/Fortica</b> fort above the canyon (a 2–3 hr loop, 994 ft) or the quick 15-min <b>Mirabela</b> in town. Adrenaline option: a via ferrata or a river zipline."},
          {when:"Afternoon", c:"history", t:"On to <b>Split</b>; drop the car and walk straight into <b>Diocletian's Palace</b> — a 1,700-year-old Roman palace that's still a living neighborhood. The Peristyle, the bell tower, the palm-lined Riva."},
          {when:"Evening", c:"food", t:"Dinner in the <b>Varoš</b> lanes — Konoba Fetivi or Konoba Varoš for pašticada (slow beef) and black cuttlefish risotto."},
        ]},
@@ -658,13 +791,14 @@ const ROUTES = {
     letter:"B", name:"Central Dalmatia & Islands", best:false,
     theme:"Less mountain, more water. Drive to Split, then catamaran out to Brač's golden-horn beach (Hvar an easy swap).",
     route:"Dubrovnik → Split → Brač / Hvar", fly:"In DBV · Out SPU",
+    transport:"🚗→⛴ Car or car-free — drive or boat to Split, then ferries",
     tags:["Most swimming","Island time","Least driving","Ferry-led"],
     strip:["Dubrovnik","Split","Brač","Split"],
     photos:["trogir","split","zlatnirat","vidova","hvar","krka"],
     map:{
       center:[43.30,16.70], zoom:9, fit:true,
       routes:[
-        {pts:COAST, color:"#C2592C", weight:3, opacity:.5},
+        {pts:COAST, road:true, via:VIA_DS, color:"#C2592C", weight:3, opacity:.55},
         {pts:FERRY_SPLIT_BOL, color:"#1D6A96", weight:4, dash:"7 8"},
         {pts:FERRY_SPLIT_HVAR, color:"#1D6A96", weight:3, dash:"3 8", opacity:.6},
       ],
@@ -682,20 +816,20 @@ const ROUTES = {
     days:[
       {d:"22", dow:"Mon · Sep", place:"South coast to Split", note:"Same gorgeous shoreline as Route A, with a UNESCO stop.",
        slots:[
-         {when:"Morning", c:"logi", t:"Collect the one-way car and drive the coast north (~137 mi). <b>Ston</b> oysters and the <b>Pelješac Bridge</b> make a good lunch stop on the way."},
+         {when:"Morning", c:"logi", m:"car", t:"Collect the one-way car and drive the coast north (~137 mi). <b>Ston</b> oysters and the <b>Pelješac Bridge</b> make a good lunch stop on the way."},
          {when:"Afternoon", c:"history", t:"Pull into <b>Trogir</b> — a tiny UNESCO-listed stone town on its own islet, with a knockout Romanesque cathedral portal. Then the short hop to <b>Split</b>; drop the car (you'll go by ferry from here)."},
          {when:"Evening", c:"food", t:"Settle into Split — Riva stroll and great-value seafood at <b>Konoba Matejuška</b> by the fishing harbor."},
        ]},
       {d:"23", dow:"Tue · Sep", place:"Brač & the golden horn", note:"A short hop to the island and its famous spit.",
        slots:[
-         {when:"Morning", c:"swim", t:"Catamaran to <b>Bol</b> on Brač (~1 hr). Drop bags and walk out to <b>Zlatni Rat</b>, the famous shape-shifting pebble spit — easily the best swimming on the trip."},
+         {when:"Morning", c:"swim", m:"boat", t:"Catamaran to <b>Bol</b> on Brač (~1 hr). Drop bags and walk out to <b>Zlatni Rat</b>, the famous shape-shifting pebble spit — easily the best swimming on the trip."},
          {when:"Afternoon", c:"view", t:"Up <b>Vidova Gora</b> (2,552 ft), the highest point of any Adriatic island, on the cliff right above the spit. Drive, taxi, or hike (~6.6 mi round-trip from Bol); the view reaches Hvar and the mainland."},
          {when:"Evening", c:"food", t:"Bol's konobas and Brač olive oil; an easy island night. <span style='color:#6b7780'>(Prefer the buzz? Swap Brač for Hvar Town.)</span>"},
        ]},
       {d:"24", dow:"Wed · Sep", place:"Island morning, back to Split", note:"One more swim, then reclaim the city.",
        slots:[
          {when:"Morning", c:"gem", t:"A slow island morning — another swim at Zlatni Rat, or poke into <b>Pučišća</b>, home of Brač's famous stone-carving school."},
-         {when:"Afternoon", c:"logi", t:"Catamaran back to <b>Split</b> in the afternoon. Climb the cathedral bell tower, wander the palace cellars, regroup."},
+         {when:"Afternoon", c:"logi", m:"boat", t:"Catamaran back to <b>Split</b> in the afternoon. Climb the cathedral bell tower, wander the palace cellars, regroup."},
          {when:"Evening", c:"food", t:"Dinner at tiny, local <b>Villa Spiža</b> or the konobas of Varoš; a nightcap on a palace square."},
        ]},
       {d:"25", dow:"Thu · Sep", place:"Split, then home", note:"Slow morning, evening flight.",
@@ -711,13 +845,14 @@ const ROUTES = {
     letter:"C", name:"Southern Slow Road", best:false,
     theme:"Food, wine and one beautiful little walled town. Korčula by boat, then on to Split. Gentlest on the legs.",
     route:"Dubrovnik → Korčula → Split", fly:"In DBV · Out SPU",
+    transport:"⛴ Car-free option — catamarans the whole way",
     tags:["Food & wine","Most relaxed","Easy on the legs","Korčula"],
     strip:["Dubrovnik","Korčula","Split"],
     photos:["ston","korcula","peljesac","split"],
     map:{
       center:[43.00,17.30], zoom:9, fit:true,
       routes:[
-        {pts:C_TO_OREBIC, color:"#6E5A8E", weight:4},
+        {pts:C_TO_OREBIC, road:true, via:VIA_C, color:"#6E5A8E", weight:4},
         {pts:FERRY_OREBIC_KOR, color:"#6E5A8E", weight:3, dash:"6 7"},
         {pts:FERRY_KOR_SPLIT, color:"#6E5A8E", weight:3, dash:"6 7"},
       ],
@@ -735,7 +870,7 @@ const ROUTES = {
     days:[
       {d:"22", dow:"Mon · Sep", place:"Slow road to Korčula", note:"The gourmet way across, by car and a short ferry.",
        slots:[
-         {when:"Morning", c:"logi", t:"The gourmet way: a one-way car up the coast, with oysters in <b>Ston</b> and a taste of <b>Pelješac's</b> big reds (Dingač, Postup) along the peninsula. The short <b>Orebić car-ferry</b> drops you on Korčula. <span style='color:#6b7780'>(Or skip the car entirely and take the foot-passenger catamaran straight from Dubrovnik.)</span>"},
+         {when:"Morning", c:"logi", m:"either", t:"The gourmet way: a one-way car up the coast, with oysters in <b>Ston</b> and a taste of <b>Pelješac's</b> big reds (Dingač, Postup) along the peninsula. The short <b>Orebić car-ferry</b> drops you on Korčula. <span style='color:#6b7780'>(Or skip the car entirely and take the foot-passenger catamaran straight from Dubrovnik.)</span>"},
          {when:"Afternoon", c:"history", t:"Arrive <b>Korčula Town</b> — the little 'fishbone' walled city. Wander the Venetian lanes, climb St Mark's tower, and feel how much quieter it is than Dubrovnik."},
          {when:"Evening", c:"food", t:"Local seafood and a bottle of <b>Pošip</b>. One splurge option: <b>LD Restaurant</b> for a harborside tasting menu — the trip's single fine-dining night, if you want one."},
        ]},
@@ -748,7 +883,7 @@ const ROUTES = {
       {d:"24", dow:"Wed · Sep", place:"Across to Split", note:"A morning on Korčula, then the boat north.",
        slots:[
          {when:"Morning", c:"history", t:"A slow Korčula morning — the cathedral tower, an espresso on the walls — before the boat."},
-         {when:"Afternoon", c:"logi", t:"Catamaran to <b>Split</b> (some lines call at Hvar or Brač en route). Into <b>Diocletian's Palace</b> for the afternoon."},
+         {when:"Afternoon", c:"logi", m:"boat", t:"Catamaran to <b>Split</b> (some lines call at Hvar or Brač en route). Into <b>Diocletian's Palace</b> for the afternoon."},
          {when:"Evening", c:"food", t:"<b>Konoba Varoš</b> or <b>Fetivi</b> for classic Dalmatian; plan a last Pazar-market graze for the morning."},
        ]},
       {d:"25", dow:"Thu · Sep", place:"Split, then home", note:"Slow morning, evening flight.",
@@ -772,13 +907,20 @@ const FOOD = [
 /* =========================================================
    RENDER
    ========================================================= */
+function COMMONS(file, w){
+  return "https://commons.wikimedia.org/wiki/Special:FilePath/" + encodeURIComponent(file) + "?width=" + w;
+}
+function escAttr(s){
+  return String(s).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
 function photoHTML(key){
   const p = PH[key]; if(!p) return "";
-  const src = "https://commons.wikimedia.org/wiki/Special:FilePath/" + encodeURIComponent(p.file) + "?width=900";
-  return '<figure class="ph">'
-    + '<img src="'+src+'" alt="'+p.label+'" loading="lazy" referrerpolicy="no-referrer" '
+  return '<figure class="ph" role="button" tabindex="0" aria-label="Expand photo: '+escAttr(p.label)+'" '
+    + 'data-file="'+escAttr(p.file)+'" data-cap="'+escAttr(p.label)+'">'
+    + '<img src="'+COMMONS(p.file,900)+'" alt="'+escAttr(p.label)+'" loading="lazy" referrerpolicy="no-referrer" '
     + 'onerror="this.style.display=\'none\';this.parentNode.classList.add(\'noimg\')">'
-    + '<figcaption><span>'+p.label+'</span></figcaption></figure>';
+    + '<figcaption><span>'+p.label+'</span></figcaption>'
+    + '<span class="ph-zoom" aria-hidden="true">⤢</span></figure>';
 }
 function galleryHTML(keys){ return keys.map(photoHTML).join(""); }
 
@@ -791,9 +933,10 @@ function lensChipsHTML(){
 function dayCardHTML(day){
   const slots = day.slots.map(function(s){
     const cat = CAT[s.c];
+    const m = s.m && MODE[s.m] ? '<span class="mpill" style="--m:'+MODE[s.m].c+'">'+MODE[s.m].i+' '+MODE[s.m].t+'</span>' : '';
     return '<div class="slot" data-cat="'+s.c+'" style="--c:var('+cat.v+')">'
       + '<div class="slot-when">'+s.when+'</div>'
-      + '<div><span class="slot-tag"><span class="sd"></span>'+cat.label+'</span>'
+      + '<div><span class="slot-tag"><span class="sd"></span>'+cat.label+'</span>'+m
       + '<p class="slot-txt">'+s.t+'</p></div></div>';
   }).join("");
   return '<article class="dayc"><div class="dayc-h">'
@@ -851,6 +994,32 @@ document.getElementById("gal-opening").innerHTML = galleryHTML(OPENING.photos);
    MAPS (Leaflet)
    ========================================================= */
 const MAPS = {};
+
+/* Fetch the real road geometry between waypoints from the public OSRM server.
+   Runs in the visitor's browser; returns [[lat,lon],...] or null on any failure
+   (so the map always falls back to the drawn approximate line). */
+const ROAD_CACHE = {};
+function fetchRoad(via){
+  const coords = via.map(function(p){ return p[1]+","+p[0]; }).join(";");
+  if(ROAD_CACHE[coords]) return ROAD_CACHE[coords];
+  const url = "https://router.project-osrm.org/route/v1/driving/" + coords + "?overview=full&geometries=geojson";
+  const p = new Promise(function(resolve){
+    if(typeof fetch === "undefined"){ resolve(null); return; }
+    const ctrl = (typeof AbortController !== "undefined") ? new AbortController() : null;
+    const timer = setTimeout(function(){ if(ctrl) ctrl.abort(); resolve(null); }, 7000);
+    fetch(url, ctrl ? {signal:ctrl.signal} : {}).then(function(r){
+      return r.ok ? r.json() : null;
+    }).then(function(j){
+      clearTimeout(timer);
+      if(j && j.routes && j.routes[0] && j.routes[0].geometry){
+        resolve(j.routes[0].geometry.coordinates.map(function(c){ return [c[1], c[0]]; }));
+      } else { resolve(null); }
+    }).catch(function(){ clearTimeout(timer); resolve(null); });
+  });
+  ROAD_CACHE[coords] = p;
+  return p;
+}
+
 function buildMap(id, cfg){
   if(typeof L === "undefined") return null;
   if(MAPS[id]){ MAPS[id].remove(); delete MAPS[id]; }
@@ -859,8 +1028,11 @@ function buildMap(id, cfg){
     maxZoom:18, attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
   (cfg.routes||[]).forEach(function(r){
-    L.polyline(r.pts, {color:r.color, weight:r.weight||4, opacity:r.opacity!=null?r.opacity:.9,
+    const line = L.polyline(r.pts, {color:r.color, weight:r.weight||4, opacity:r.opacity!=null?r.opacity:.9,
       dashArray:r.dash||null, lineJoin:"round", lineCap:"round"}).addTo(map);
+    if(r.road && r.via){
+      fetchRoad(r.via).then(function(real){ if(real && real.length>1){ line.setLatLngs(real); } });
+    }
   });
   const pts = [];
   (cfg.markers||[]).forEach(function(m){
@@ -884,8 +1056,8 @@ function buildStaticMaps(){
   buildMap("map-overview", {
     center:[43.10,17.30], zoom:8, fit:true,
     routes:[
-      {pts:COAST, color:"#C2592C", weight:4},
-      {pts:C_TO_OREBIC, color:"#6E5A8E", weight:3},
+      {pts:COAST, road:true, via:VIA_A, color:"#C2592C", weight:4},
+      {pts:C_TO_OREBIC, road:true, via:VIA_C, color:"#6E5A8E", weight:3},
       {pts:FERRY_OREBIC_KOR, color:"#6E5A8E", weight:3, dash:"6 7"},
       {pts:FERRY_KOR_SPLIT, color:"#6E5A8E", weight:3, dash:"6 7"},
       {pts:FERRY_SPLIT_BOL, color:"#1D6A96", weight:3, dash:"7 8"},
@@ -948,12 +1120,13 @@ function renderRoute(key){
   detailEl.innerHTML =
     '<div class="banner"><div class="banner-top"><div>'
       + '<div class="rl">Route '+d.letter+'</div><h3>'+d.name+'</h3>'
-      + '<div class="rt">'+d.route+'</div></div>'
+      + '<div class="rt">'+d.route+'</div>'
+      + (d.transport?'<div class="rtransport">'+d.transport+'</div>':'')+'</div>'
       + '<div class="fly">'+d.fly+'</div></div>'
       + '<div class="strip-line">'+stripSVGlight(d.strip)+'</div></div>'
 
     + '<div class="map" id="map-route" role="img" aria-label="Map of Route '+d.letter+'"></div>'
-    + '<div class="map-note">Route '+d.letter+': '+d.route+'. Solid line = drive · dashed = ferry.</div>'
+    + '<div class="map-note">Route '+d.letter+': '+d.route+'. Solid line follows the real roads (drive); dashed lines are ferry legs across open water.</div>'
 
     + '<div class="gallery">'+galleryHTML(d.photos)+'</div>'
 
@@ -993,6 +1166,49 @@ function selectRoute(key){
   });
   renderRoute(key);
 }
+
+/* =========================================================
+   LIGHTBOX — click any photo to expand
+   ========================================================= */
+(function(){
+  const lb = document.getElementById("lightbox");
+  const lbImg = document.getElementById("lb-img");
+  const lbCap = document.getElementById("lb-cap");
+  let lastFocus = null;
+
+  function open(file, cap){
+    lastFocus = document.activeElement;
+    lbImg.src = COMMONS(file, 1600);
+    lbImg.alt = cap || "";
+    lbCap.textContent = cap || "";
+    lb.hidden = false;
+    document.body.style.overflow = "hidden";
+    lb.querySelector(".lb-close").focus();
+  }
+  function close(){
+    lb.hidden = true;
+    lbImg.removeAttribute("src");
+    document.body.style.overflow = "";
+    if(lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  // open on click of a photo tile (skip ones whose image failed to load)
+  document.addEventListener("click", function(e){
+    const fig = e.target.closest(".ph");
+    if(fig && fig.dataset.file && !fig.classList.contains("noimg")){ open(fig.dataset.file, fig.dataset.cap); return; }
+    if(e.target === lb || e.target.classList.contains("lb-close")) close();
+  });
+  // keyboard: Enter/Space opens a focused tile; Esc closes
+  document.addEventListener("keydown", function(e){
+    if(!lb.hidden && e.key === "Escape"){ close(); return; }
+    if(e.key === "Enter" || e.key === " "){
+      const fig = document.activeElement;
+      if(fig && fig.classList && fig.classList.contains("ph") && fig.dataset.file && !fig.classList.contains("noimg")){
+        e.preventDefault(); open(fig.dataset.file, fig.dataset.cap);
+      }
+    }
+  });
+})();
 
 /* ---- init ---- */
 window.addEventListener("load", function(){
