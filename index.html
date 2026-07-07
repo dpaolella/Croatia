@@ -451,7 +451,7 @@
         <div class="eyebrow">Everyone does this · Sept 25–26</div>
         <h2>The shared finale: Plitvice, then the flight home</h2>
       </div>
-      <p class="lede">The Saturday-evening Zagreb flight is what makes this possible: <b>Plitvice Lakes sits right on the road from Split to Zagreb</b>, so whichever middle you pick, the last two days are the same. Friday: easy Split morning, collect the car (boat crews rent here; drivers already have one), roll north with an optional stop, sleep by the park. Saturday: the lakes on foot all morning, then Zagreb and the 6&nbsp;pm flight to Berlin.</p>
+      <p class="lede">The Saturday-evening Zagreb flight is what makes this possible: <b>Plitvice Lakes sits right on the road from Split to Zagreb</b>, so whichever middle you pick, the last two days are the same. Friday: easy Split morning, collect the car (boat crews rent here; drivers already have one), roll north with an optional stop, sleep by the park. Saturday: the lakes on foot all morning, then Zagreb and the evening flight home.</p>
 
       <div class="map" id="map-finale" role="img" aria-label="Map of the drive from Split to Plitvice Lakes and on to Zagreb airport"></div>
       <div class="map-note">Split → Plitvice ~155 mi (~2.5–3 hrs) · Plitvice → Zagreb Airport ~85 mi (~2 hrs). Optional breaks: Trogir or Krka on the way up, Rastoke on the way out.</div>
@@ -573,7 +573,7 @@
       <div class="logi-grid">
         <div class="logi">
           <h4>✈︎ Flights &amp; staggered arrivals</h4>
-          <p>Fly <b>into Dubrovnik, home out of Zagreb</b> (open-jaw) — the anchor is the <b>6 pm ZAG → Berlin departure on Saturday the 26th</b>. You land Saturday morning the 19th; a friend may join that day, the last of the crew lands Monday the 21st. Everyone books the same in-DBV / out-ZAG shape without matching exact flights.</p>
+          <p>Fly <b>into Dubrovnik, home out of Zagreb</b> (open-jaw) — the anchor is an <b>evening departure from Zagreb (ZAG) on Saturday the 26th</b>. You land Saturday morning the 19th; a friend may join that day, the last of the crew lands Monday the 21st. Everyone books the same in-DBV / out-ZAG shape without matching exact flights.</p>
         </div>
         <div class="logi">
           <h4>🚗 The one-way car</h4>
@@ -622,7 +622,7 @@
           <h3>Book <em>Route D.</em> It's shaped around how this trip actually lands.</h3>
           <div class="rec-points">
             <div class="rp"><div class="k">Why it wins</div><p>Mljet fills the solo window (Sat–Sun) with the trip's calmest corner — saltwater lakes, a monastery islet, bikes instead of cars — and the ~11:10 boat has you back on Dubrovnik's dock at lunchtime Monday, right as the last arrival lands. Then the ferries sightsee for you all the way to Split, and Plitvice caps the week with zero backtracking.</p></div>
-            <div class="rp"><div class="k">The catch: book it early</div><p>D commits you before you fly — the arrival-day catamaran to Mljet, two island nights, the Plitvice timed slot and the 6 pm ZAG seat. Routes A–C share the Dubrovnik opening, so they stay swappable until the morning of the 22nd if you'd rather decide off the weather.</p></div>
+            <div class="rp"><div class="k">The catch: book it early</div><p>D commits you before you fly — the arrival-day catamaran to Mljet, two island nights, the Plitvice timed slot and the evening ZAG seat. Routes A–C share the Dubrovnik opening, so they stay swappable until the morning of the 22nd if you'd rather decide off the weather.</p></div>
             <div class="rp"><div class="k">If not D</div><p><b>A</b> is the driver's trip — the coast road and Biokovo's big lookout. <b>B</b> is maximum swimming (Brač's golden horn). <b>C</b> is the gentlest — Korčula, wine, and long lunches.</p></div>
             <div class="rp"><div class="k">Everyone meets in Split anyway</div><p>All four routes sleep in Split on Thursday the 24th and at Plitvice on Friday — so the group can even run two middles in parallel (a car crew, a boat crew) and reunite for the finale without touching anyone's flights.</p></div>
           </div>
@@ -678,7 +678,7 @@ const CREW = [
   {d:"23", dow:"Wed", tag:"Route day."},
   {d:"24", dow:"Thu", tag:"Route day — everyone sleeps in Split."},
   {d:"25", dow:"Fri", tag:"All routes: drive to Plitvice.", cls:"go"},
-  {d:"26", dow:"Sat", tag:"Park AM → Zagreb → 6 pm flight.", cls:"go"},
+  {d:"26", dow:"Sat", tag:"Park AM → Zagreb → evening flight.", cls:"go"},
 ];
 
 /* photo helper data: {file, label} — Wikimedia Commons filenames */
@@ -797,7 +797,7 @@ const FINALE = [
    slots:[
      {when:"Morning", c:"view", m:"foot", t:"<b>Plitvice Lakes</b> — 16 terraced lakes stitched together by boardwalks. Do the Lower Lakes to <b>Veliki Slap</b> (Croatia's tallest waterfall, ~256 ft), ride the <b>boat across Lake Kozjak</b>, then as much of the Upper Lakes as the clock allows (4–5 hrs is a solid visit). No swimming — it's a UNESCO park."},
      {when:"Afternoon", c:"logi", m:"car", t:"Roll out early-to-mid afternoon for the ~<b>85 mi</b> to Zagreb (~2 hrs). Worth a 30-minute stop at <b>Rastoke</b>, the watermill hamlet where the Slunjčica spills into the Korana — a pocket-sized Plitvice."},
-     {when:"Evening", c:"logi", t:"Drop the car at <b>Zagreb Airport (ZAG)</b> and catch the <b>6 pm flight to Berlin</b>."},
+     {when:"Evening", c:"logi", t:"Drop the car at <b>Zagreb Airport (ZAG)</b> and catch the <b>evening flight home</b>."},
    ]},
 ];
 
@@ -1198,7 +1198,7 @@ function buildStaticMaps(){
       {pt:[43.806,15.964], label:"Krka · Skradinski Buk (optional stop)", color:MC.gem},
       {pt:[44.8807,15.6161], label:"Plitvice Lakes · Fri night + Sat AM", color:MC.view, perm:true},
       {pt:[45.1146,15.5866], label:"Rastoke (coffee stop)", color:MC.gem},
-      {pt:[45.7429,16.0688], label:"Zagreb Airport · Sat 6 pm flight", color:MC.end, perm:true, dir:"left"},
+      {pt:[45.7429,16.0688], label:"Zagreb Airport · Sat evening flight", color:MC.end, perm:true, dir:"left"},
     ]
   });
 }
