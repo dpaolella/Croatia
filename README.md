@@ -3,7 +3,7 @@
 A single-page trip-planning board to kick around with the crew. It lays out a
 **fixed shape** for the week — land in Dubrovnik Saturday morning the 19th,
 converge on Split by Thursday the 24th, sleep at Plitvice Lakes Friday, and fly
-home from Zagreb on Saturday evening the 26th — and offers **four itinerary
+home from Zagreb on the evening of the 26th — and offers **four itinerary
 shapes** to choose between for the middle.
 
 Open `index.html` in any browser. Everything is in that one file.
