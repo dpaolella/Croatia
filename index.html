@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Croatia · Dubrovnik → Split · 19–25 September</title>
-<meta name="description" content="A trip-planning board for 7 days in Dalmatia: three nights in Dubrovnik while the crew arrives, then a choice of three roads north to Split. Day-by-day schedule, maps, and photos.">
+<title>Croatia · Dubrovnik → Zagreb · 19–26 September</title>
+<meta name="description" content="A trip-planning board for 7 nights in Croatia: four itinerary shapes from Dubrovnik to a Plitvice Lakes finale and the flight home from Zagreb. Day-by-day schedule, maps, and photos.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Archivo:wght@400;500;600;700&family=Archivo+Narrow:wght@500;600;700&display=swap" rel="stylesheet">
@@ -119,7 +119,7 @@
   .divider{height:1px;background:var(--stone-line);max-width:var(--maxw);margin:0 auto}
 
   /* ---------- WHO'S COMING ---------- */
-  .crew{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin:6px 0 30px}
+  .crew{display:grid;grid-template-columns:repeat(8,1fr);gap:8px;margin:6px 0 30px}
   .crew .c{
     background:var(--paper-2);border:1px solid var(--stone-line);border-radius:5px;
     padding:12px 10px;min-height:104px;display:flex;flex-direction:column;gap:6px;
@@ -165,7 +165,7 @@
   .ph.noimg figcaption:after{content:"";position:absolute;inset:0;border:1px dashed rgba(255,255,255,.35);border-radius:6px;margin:8px}
 
   /* ---------- ROUTE CARDS ---------- */
-  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
+  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:8px}
   .card{
     position:relative;text-align:left;cursor:pointer;
     background:var(--paper-2);border:1px solid var(--stone-line);border-radius:6px;
@@ -353,14 +353,14 @@
     </svg>
   </div>
   <div class="wrap hero-inner">
-    <div class="eyebrow">19–25 September · Dalmatia · Dubrovnik → Split</div>
-    <h1>Croatia, <em>three ways</em> north.</h1>
-    <p class="sub">A board to kick around with the crew. Three nights in Dubrovnik while everyone trickles in, then a choice of roads up the coast to Split — old stone towns, big lookouts, long lunches, and a swim whenever you feel like one. Nothing's locked. Pick a route and walk it day by day.</p>
+    <div class="eyebrow">19–26 September · 7 nights · Dubrovnik → Zagreb</div>
+    <h1>Croatia, <em>four ways</em> north.</h1>
+    <p class="sub">A board to kick around with the crew. Seven nights from the walls of Dubrovnik to the Plitvice lakes — islands, old stone towns, big lookouts, long lunches, and a swim whenever you feel like one. Nothing's locked. Pick a shape below and walk it day by day.</p>
     <div class="facts">
-      <div class="fact"><div class="n">7 days</div><div class="l">Sep 19 → 25</div></div>
+      <div class="fact"><div class="n">7 nights</div><div class="l">Sat Sep 19 → Sat 26</div></div>
       <div class="fact"><div class="n">Low-70s°F</div><div class="l">Sea · still swimmable</div></div>
-      <div class="fact"><div class="n">3 roads</div><div class="l">North to Split</div></div>
-      <div class="fact"><div class="n">Open-jaw</div><div class="l">Land DBV · fly SPU</div></div>
+      <div class="fact"><div class="n">4 shapes</div><div class="l">Same week</div></div>
+      <div class="fact"><div class="n">Open-jaw</div><div class="l">Land DBV · fly ZAG</div></div>
     </div>
   </div>
 </header>
@@ -372,17 +372,19 @@
     <div class="wrap">
       <div class="sec-head">
         <div class="eyebrow">How it's shaped</div>
-        <h2>Land in Dubrovnik, drift north, fly home from Split</h2>
+        <h2>Land in Dubrovnik, drift north, fly home from Zagreb</h2>
       </div>
-      <p class="lede">You arrive the morning of the 19th; the crew fills in over the first couple of days, with the last of you landing on the 21st. So the plan front-loads Dubrovnik — easy, walkable, no car — and saves the moving-around for once everyone's together. You fly home out of Split on the 25th, which means an <b>open-jaw</b> trip (into Dubrovnik, out of Split) and no doubling back. Everyone can book that same shape; flights don't have to match.</p>
+      <p class="lede">You land <b>Saturday morning the 19th</b>; friends trickle in — maybe one on the 19th, the last on <b>Monday the 21st</b>. Every option then funnels to the same ending: <b>everyone sleeps in Split on Thursday the 24th</b>, spends Friday night at <b>Plitvice Lakes</b>, and catches the <b>6&nbsp;pm Saturday flight home from Zagreb</b> on the 26th. That's an <b>open-jaw</b> booking — into Dubrovnik, out of Zagreb — with zero backtracking; everyone books that shape, exact flights don't need to match. In between: four ways to spend the week, three opening with Dubrovnik and one (the one worth booking) opening with two nights on a car-free island.</p>
 
       <div class="crew" id="crew"></div>
 
       <div class="map tall" id="map-overview" role="img" aria-label="Map of the three routes from Dubrovnik to Split"></div>
       <div class="legend">
+        <span class="li"><span class="ln dash" style="--c:#3E7C63"></span> Route D · Mljet &amp; the islands (recommended)</span>
         <span class="li"><span class="ln" style="--c:#C2592C"></span> Route A · coast drive (Biokovo &amp; Omiš)</span>
         <span class="li"><span class="ln dash" style="--c:#1D6A96"></span> Route B · Split + the islands</span>
         <span class="li"><span class="ln" style="--c:#6E5A8E"></span> Route C · Korčula slow road</span>
+        <span class="li"><span class="ln" style="--c:#0B3C5D"></span> Everyone, Sept 25–26 · Split → Plitvice → Zagreb</span>
       </div>
       <div class="map-note">Maps are interactive — drag to pan, use the +/− buttons to zoom. Hover or tap a marker for its name.</div>
     </div>
@@ -394,20 +396,15 @@
   <section id="opening">
     <div class="wrap">
       <div class="sec-head">
-        <div class="eyebrow">Everyone does this · Sept 19–21</div>
-        <h2>The Dubrovnik opening <span class="flag">🚶 No car needed</span></h2>
+        <div class="eyebrow">The city anchor · on every route</div>
+        <h2>Dubrovnik, whichever way you go <span class="flag">🚶 No car needed</span></h2>
       </div>
-      <p class="lede">Three nights inside (or just outside) the walls, shared by all three routes. The first two days are quieter — solo or a small group — which is a gift: do the things that are nicer without a crowd. By the 21st the whole crew's in and you point the car north.</p>
+      <p class="lede">Every shape includes Dubrovnik — routes A–C base here the first three nights (Sat 19 → Tue 22); route D lands back here Monday lunchtime after Mljet and stays two. This is the shared playbook for those days — the walls at opening time, Srđ by trail, cable car or bus, and a boat afternoon — and the exact scheduling lives in each route's day-by-day below.</p>
 
       <div class="map" id="map-opening" role="img" aria-label="Map of Dubrovnik with Mount Srđ, Lokrum, beaches and the Elaphiti islands"></div>
       <div class="map-note">Dubrovnik &amp; the day-trip reach — Mount Srđ above town, Lokrum just offshore, and the car-free Elaphiti islands to the northwest.</div>
 
       <div class="gallery" id="gal-opening"></div>
-
-      <div class="lens-bar" data-scope="opening">
-        <span class="lens-label">Highlight</span>
-      </div>
-      <div class="days" id="days-opening"></div>
 
       <div class="callout blue" style="margin-top:24px">
         <div class="ic">⛴️</div>
@@ -435,13 +432,40 @@
   <section id="routes">
     <div class="wrap">
       <div class="sec-head">
-        <div class="eyebrow">Choose your road north · Sept 22–25</div>
-        <h2>Three ways from Dubrovnik to Split</h2>
+        <div class="eyebrow">Choose your shape · Sept 19–26</div>
+        <h2>Four ways to spend the week</h2>
       </div>
-      <p class="lede">Same start, same finish, three different middles. You don't have to decide now — you could even call it mid-trip off the weather. Tap a card to open its map, photos and day-by-day.</p>
+      <p class="lede">Same landing, same finale, four different middles. Each card is the <b>complete week</b>, day by day. Routes A–C share the Dubrovnik opening and stay swappable until the morning of the 22nd; Route D — the recommended one — starts with an island and needs booking before you fly. Tap a card to open its map, photos and schedule.</p>
 
       <div class="cards" id="cards" role="tablist" aria-label="Route options"></div>
       <div class="detail" id="detail" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ===== SHARED FINALE ===== -->
+  <section id="finale">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Everyone does this · Sept 25–26</div>
+        <h2>The shared finale: Plitvice, then the flight home</h2>
+      </div>
+      <p class="lede">The Saturday-evening Zagreb flight is what makes this possible: <b>Plitvice Lakes sits right on the road from Split to Zagreb</b>, so whichever middle you pick, the last two days are the same. Friday: easy Split morning, collect the car (boat crews rent here; drivers already have one), roll north with an optional stop, sleep by the park. Saturday: the lakes on foot all morning, then Zagreb and the 6&nbsp;pm flight to Berlin.</p>
+
+      <div class="map" id="map-finale" role="img" aria-label="Map of the drive from Split to Plitvice Lakes and on to Zagreb airport"></div>
+      <div class="map-note">Split → Plitvice ~155 mi (~2.5–3 hrs) · Plitvice → Zagreb Airport ~85 mi (~2 hrs). Optional breaks: Trogir or Krka on the way up, Rastoke on the way out.</div>
+
+      <div class="gallery" id="gal-finale"></div>
+
+      <div class="callout blue" style="margin-top:20px">
+        <div class="ic">🎟️</div>
+        <div>
+          <div class="k">Book this when you book flights</div>
+          <h5>Plitvice is timed-entry — and September 26 is still peak pricing</h5>
+          <p>Adult day tickets are <b>~€40 (~$43) through Sept 30</b> (they drop from October), entry is a <b>timed one-hour window</b>, the daily cap is ~8,000 people, and <b>morning slots sell out weeks ahead</b> — buy on the official site (np-plitvicka-jezera.hr). The ticket includes the <b>boat across Lake Kozjak</b> and the shuttle train. Do the Lower Lakes to <b>Veliki Slap</b> (Croatia's tallest waterfall, ~256 ft), cross the lake, and walk as much of the Upper Lakes as the clock allows — 4–5 hrs is a solid visit. No swimming here — it's a UNESCO park. One more thing: the park sits at ~2,000 ft, so mornings run 50s°F — pack a layer.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -476,29 +500,29 @@
         <div class="eyebrow">Car or boat?</div>
         <h2>How you actually get from Dubrovnik to Split</h2>
       </div>
-      <p class="lede">You spotted it — you don't necessarily need a car. The mountain-and-coast route (A) really does, but you can also island-hop the whole way by catamaran (that's Route C, and a car-free version of B). Here's the trade-off, with rough one-way costs. Treat the numbers as ballpark figures to reconfirm for 2026.</p>
+      <p class="lede">You spotted it — you don't need a car for most of this. The mountain-and-coast route (A) really does, but routes C and D float all the way to Split by catamaran, and B works either way. The one constant: <b>every route rents a car in Split for the Plitvice finale</b> (Sept 25–26) and drops it at Zagreb airport. Here's the trade-off, with rough costs — ballpark figures to reconfirm for 2026.</p>
 
       <div class="compare">
         <div class="cmp car">
-          <h3>🚗 One-way rental</h3>
-          <div class="cmp-cost">~€200–350<span>total for the car</span></div>
+          <h3>🚗 The car way (Route A, or B by car)</h3>
+          <div class="cmp-cost">~€260–470<span>total for the car · 5 days, DBV → ZAG</span></div>
           <ul>
-            <li>Compact car, ~3 days (collect leaving Dubrovnik, drop at Split airport): <b>~€120–210</b></li>
-            <li>One-way drop fee: <b>~€0–60</b> (often small or waived within Croatia)</li>
-            <li>Fuel + tolls — the Pelješac Bridge is free: <b>~€35–55</b></li>
+            <li>Compact car, ~5 days (collect leaving Dubrovnik on the 22nd, drop at Zagreb airport the 26th): <b>~€160–300</b></li>
+            <li>One-way drop fee within Croatia: <b>~€0–80</b></li>
+            <li>Fuel + tolls for the whole run — the Pelješac Bridge is free: <b>~€90–110</b></li>
             <li>Parking in towns: <b>~€10–20/day</b></li>
           </ul>
           <p class="cmp-note"><b>Priced per car, split by the group</b> — cheaper per head the more of you there are. It's the only way to reach Biokovo, Omiš, the Makarska Riviera beaches and the Pelješac wine road. Mind the Dubrovnik old-town fine and town parking.</p>
         </div>
         <div class="cmp boat">
-          <h3>⛴ Foot-passenger catamarans</h3>
-          <div class="cmp-cost">~€45–90<span>per person, one-way</span></div>
+          <h3>⛴ The boat way (Routes C &amp; D, or B by ferry)</h3>
+          <div class="cmp-cost">~€50–100<span>per person in ferries · + the shared finale car</span></div>
           <ul>
-            <li>Dubrovnik → Korčula: <b>~€25–35 pp</b></li>
-            <li>Korčula → Split: <b>~€20–30 pp</b></li>
-            <li>Or one through Dubrovnik → Split fast boat (seasonal, via the islands): <b>~€40–60 pp</b></li>
+            <li>Dubrovnik → Mljet (Route D): <b>~€10–25 pp</b> · Mljet → Dubrovnik the same</li>
+            <li>Dubrovnik → Korčula: <b>~€25–35 pp</b> · Korčula → Split: <b>~€20–30 pp</b></li>
+            <li>Then the finale rental everyone needs — Split → Zagreb, 2 days: <b>~€80–150 + ~€55 fuel/tolls</b>, per car, split</li>
           </ul>
-          <p class="cmp-note"><b>Priced per person</b> — so it scales up with the group. No driving and gorgeous, but schedule-bound (late-September sailings thin out — confirm your dates), foot-passengers only, and you can't reach the mountain or coast stops without local buses or taxis.</p>
+          <p class="cmp-note"><b>Ferries are priced per person</b> — so they scale up with the group. No driving and gorgeous (the Korčula→Split run is basically a sightseeing cruise), but schedule-bound: late-September sailings thin out, so confirm your exact dates and book ahead.</p>
         </div>
       </div>
 
@@ -506,18 +530,19 @@
         <div class="needs-col car">
           <h4>🚗 Needs a car</h4>
           <ul>
+            <li><b>Plitvice &amp; the run to Zagreb</b> — Sept 25–26, every route (buses exist but eat the day)</li>
             <li><b>Biokovo / Sveti Jure</b> — the big lookout (Route A)</li>
             <li><b>Omiš</b> fort &amp; the Cetina canyon (A)</li>
             <li><b>Makarska Riviera</b> beaches — Brela, Tučepi (A)</li>
-            <li><b>Ston</b> oyster stop &amp; the <b>Pelješac wine road</b></li>
-            <li><b>Trogir / Šibenik / Krka</b> day trips (B)</li>
+            <li><b>Ston</b> oysters &amp; the <b>Pelješac wine road</b> · <b>Trogir / Šibenik / Krka</b> (car versions of B/C)</li>
           </ul>
         </div>
         <div class="needs-col free">
           <h4>🚶 No car needed</h4>
           <ul>
             <li><b>All of Dubrovnik</b> — Old Town, Srđ (cable car / bus / foot), Lokrum &amp; the Elaphiti by boat</li>
-            <li><b>Korčula &amp; Lumbarda</b> (C) — catamaran, then local bus, taxi or bike</li>
+            <li><b>Mljet</b> (D) — catamaran from Dubrovnik, then bikes and the park boat inside</li>
+            <li><b>Korčula &amp; Lumbarda</b> (C, D) — catamaran, then local bus, taxi or bike</li>
             <li><b>Brač &amp; Hvar</b> (B) — catamaran straight from Split</li>
             <li><b>Split itself</b> — palace, Riva, Marjan, markets, all on foot</li>
           </ul>
@@ -529,7 +554,7 @@
         <div>
           <div class="k">Bottom line</div>
           <h5>Roughly a wash for two or three of you — pick on style, not price</h5>
-          <p><b>Route A wants a car</b> (the mountain and coast stops are the whole point). <b>Route C is the easy car-free one</b> — catamaran Dubrovnik → Korčula → Split. <b>Route B works either way.</b> The car wins on flexibility and group cost; the boat wins on zero driving and scenery. With four-plus of you the car gets cheaper per head; as a pair, the boat is very competitive.</p>
+          <p><b>Route A wants the car the whole way</b> (the mountain and coast stops are the point). <b>Routes C and D float to Split</b> — no driving until the finale. <b>Route B works either way.</b> And since everyone converges on Split by Thursday night, the group can even split up — a car crew on A, a boat crew on D — and reunite for the drive to the lakes. The car wins on flexibility and per-head cost for a bigger group; the boats win on zero driving and scenery.</p>
         </div>
       </div>
     </div>
@@ -548,19 +573,27 @@
       <div class="logi-grid">
         <div class="logi">
           <h4>✈︎ Flights &amp; staggered arrivals</h4>
-          <p>Fly <b>into Dubrovnik, home out of Split</b> (open-jaw) to skip backtracking. You land the morning of the 19th; a friend may join the 19th, the last of the crew on the 21st — so the Dubrovnik days flex from solo to full group. Everyone can book the same in-DBV / out-SPU shape without matching exact flights.</p>
+          <p>Fly <b>into Dubrovnik, home out of Zagreb</b> (open-jaw) — the anchor is the <b>6 pm ZAG → Berlin departure on Saturday the 26th</b>. You land Saturday morning the 19th; a friend may join that day, the last of the crew lands Monday the 21st. Everyone books the same in-DBV / out-ZAG shape without matching exact flights.</p>
         </div>
         <div class="logi">
           <h4>🚗 The one-way car</h4>
-          <p>Dubrovnik → Split is about <b>137–143 mi</b>: the inland A1 motorway plus the Pelješac Bridge runs ~2h50 (no Bosnia border anymore), or the coastal road is ~3h45 and far prettier. Pick the car up <b>on your way out</b> of Dubrovnik and drop it at Split airport.</p>
+          <p>Dubrovnik → Split is about <b>137–143 mi</b> (A1 + the Pelješac Bridge ~2h50, or the gorgeous coastal road ~3h45). Then <b>Split → Plitvice ~155 mi</b> (~2.5–3 hrs) and <b>Plitvice → Zagreb Airport ~85 mi</b> (~2 hrs). One-way drops (DBV → ZAG, or SPU → ZAG for the boat crews) are routine within Croatia.</p>
         </div>
         <div class="logi">
           <h4>⛴ Ferries (September)</h4>
-          <p>Split ↔ Hvar and Split ↔ Bol (Brač) catamarans run ~1 hr and frequently, but are <b>foot-passenger only</b>. Dubrovnik ↔ Korčula runs year-round; the Orebić ↔ Korčula car ferry is ~15 min. Book ahead online — late-September sailings thin out.</p>
+          <p><b>Dubrovnik ↔ Mljet</b> (Pomena/Polače) catamarans run daily in September, ~1.5 hrs (TP-Line, Krilo). <b>Dubrovnik → Korčula</b> ~2 hrs; <b>Korčula → Split</b> ~2.5–3 hrs, some via Hvar/Brač. Split ↔ Bol and Split ↔ Hvar run ~1 hr. All <b>foot-passenger only</b>. Book ahead online — late-September sailings thin out.</p>
+        </div>
+        <div class="logi">
+          <h4>🏞 Plitvice entry (everyone, Sept 26)</h4>
+          <p><b>Timed-entry tickets, ~€40 (~$43)</b> adult through Sept 30, daily cap ~8,000, and <b>morning slots sell out weeks ahead</b> — book on np-plitvicka-jezera.hr as soon as flights are set. Ticket includes the Kozjak boat and shuttle train. No swimming; pack a layer for ~2,000 ft mornings.</p>
         </div>
         <div class="logi">
           <h4>🏔 Biokovo entry (Route A)</h4>
           <p>Only <b>20 cars per hour</b>, tickets online only, about <b>€15 (~$16)</b> per adult; it's <b>8 mi</b> from the gate up to the Skywalk. Park open roughly April–October. Confirm current hours at pp-biokovo.hr close to your dates.</p>
+        </div>
+        <div class="logi">
+          <h4>🛶 Mljet entry (Route D)</h4>
+          <p>The national park covers the island's lake-filled western end — entry roughly <b>€20 (~$22)</b> in high season (2026 list is posted on np-mljet.hr), and it <b>includes the boat to St Mary's islet</b>. Bikes rent by the hour in Pomena and Polače; the Veliko jezero loop is an easy ride.</p>
         </div>
         <div class="logi warn" style="grid-column:1/-1">
           <h4>⚠ Don't drive into Dubrovnik's Old Town</h4>
@@ -586,12 +619,12 @@
         </div>
         <div class="rec-inner">
           <div class="eyebrow">If you want one answer</div>
-          <h3>Lean <em>Route A</em> — but keep the choice open until the forecast lands.</h3>
+          <h3>Book <em>Route D.</em> It's shaped around how this trip actually lands.</h3>
           <div class="rec-points">
-            <div class="rp"><div class="k">Why A fits your plan</div><p>It's exactly "three days in Dubrovnik, then drive north": the coast road, one knockout lookout (Biokovo), a fort over the Cetina at Omiš, and a relaxed two-base shape that ends in Split for the flight.</p></div>
-            <div class="rp"><div class="k">Pick B for water</div><p>More swimming and island time — Brač's golden-horn beach and the view above it, with Hvar an easy swap. The least driving, the most boats.</p></div>
-            <div class="rp"><div class="k">Pick C to slow down</div><p>Korčula's little walled town, island whites, and oysters — the gentlest pace and the most eating and drinking. Easy on the legs.</p></div>
-            <div class="rp"><div class="k">Decide late</div><p>Because all three share the Dubrovnik opening, you can choose the road north on the 21st — or even the morning of the 22nd — based on the weather. Save big-lookout days for clear mornings.</p></div>
+            <div class="rp"><div class="k">Why it wins</div><p>Mljet fills the solo window (Sat–Sun) with the trip's calmest corner — saltwater lakes, a monastery islet, bikes instead of cars — and the ~11:10 boat has you back on Dubrovnik's dock at lunchtime Monday, right as the last arrival lands. Then the ferries sightsee for you all the way to Split, and Plitvice caps the week with zero backtracking.</p></div>
+            <div class="rp"><div class="k">The catch: book it early</div><p>D commits you before you fly — the arrival-day catamaran to Mljet, two island nights, the Plitvice timed slot and the 6 pm ZAG seat. Routes A–C share the Dubrovnik opening, so they stay swappable until the morning of the 22nd if you'd rather decide off the weather.</p></div>
+            <div class="rp"><div class="k">If not D</div><p><b>A</b> is the driver's trip — the coast road and Biokovo's big lookout. <b>B</b> is maximum swimming (Brač's golden horn). <b>C</b> is the gentlest — Korčula, wine, and long lunches.</p></div>
+            <div class="rp"><div class="k">Everyone meets in Split anyway</div><p>All four routes sleep in Split on Thursday the 24th and at Plitvice on Friday — so the group can even run two middles in parallel (a car crew, a boat crew) and reunite for the finale without touching anyone's flights.</p></div>
           </div>
         </div>
       </div>
@@ -599,9 +632,9 @@
   </section>
 
   <div class="wrap foot">
-    <p><b>A few honest notes.</b> This is a discussion draft, not a booking — some days (the islands especially) are alternatives you won't all do together, and that's the point. Distances, heights and swim spots are rounded; trail figures vary by source and trailhead, so check your exact line on a maps app the night before, and treat pp-biokovo.hr as the authority on Biokovo's hours and fees. Krka and Plitvice both ban swimming. Late September means shorter days (~12 hrs of light), low-60s°F nights, and a chance of a shower — start lookout days early and keep one weather-flex day in hand. Ferry frequencies, opening hours and prices shift year to year; reconfirm 2026 schedules close to travel, as some seasonal spots start closing in October.</p>
+    <p><b>A few honest notes.</b> This is a discussion draft, not a booking — some days (the islands especially) are alternatives you won't all do together, and that's the point. Distances, heights and swim spots are rounded; trail figures vary by source and trailhead, so check your exact line on a maps app the night before, and treat the official park sites (pp-biokovo.hr, np-mljet.hr, np-plitvicka-jezera.hr) as the authority on hours, fees and timed entry. Krka and Plitvice both ban swimming. Late September means shorter days (~12 hrs of light), low-60s°F coastal nights — cooler up at Plitvice — and a chance of a shower, so start lookout days early and keep one weather-flex day in hand. Ferry frequencies, opening hours and prices shift year to year; reconfirm 2026 schedules close to travel, as some seasonal spots (the Mljet catamarans included) start thinning out in October. Weekdays on this page are checked against the 2026 calendar — the 19th really is a Saturday.</p>
     <p style="margin-top:14px">Photos via <a href="https://commons.wikimedia.org/">Wikimedia Commons</a> contributors (various Creative Commons licenses); maps © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, rendered with <a href="https://leafletjs.com/">Leaflet</a>.</p>
-    <p style="margin-top:6px;color:var(--muted)">Built for a trip 19–25 September. Works in any browser.</p>
+    <p style="margin-top:6px;color:var(--muted)">Built for a trip 19–26 September. Works in any browser.</p>
   </div>
 </main>
 
@@ -636,15 +669,16 @@ const MODE = {
   either:{i:"🔄", t:"Car or boat", c:"#6E5A8E"},
 };
 
-/* who's coming when */
+/* who's coming when — weekdays per the 2026 calendar */
 const CREW = [
-  {d:"19", dow:"Fri", tag:"You land (AM). Friend ① maybe joins.", cls:"hl"},
-  {d:"20", dow:"Sat", tag:"Solo / small-group day."},
-  {d:"21", dow:"Sun", tag:"Friend ② arrives — full crew.", cls:"hl"},
-  {d:"22", dow:"Mon", tag:"Drive north begins.", cls:"go"},
-  {d:"23", dow:"Tue", tag:"Route day."},
-  {d:"24", dow:"Wed", tag:"Route day."},
-  {d:"25", dow:"Thu", tag:"Fly home from Split (PM).", cls:"go"},
+  {d:"19", dow:"Sat", tag:"You land (AM). Friend ① maybe. Route D: boat to Mljet.", cls:"hl"},
+  {d:"20", dow:"Sun", tag:"Solo / small-group day — city or island."},
+  {d:"21", dow:"Mon", tag:"Friend ② arrives — full crew in Dubrovnik.", cls:"hl"},
+  {d:"22", dow:"Tue", tag:"A–C: head north. D: Dubrovnik islands day."},
+  {d:"23", dow:"Wed", tag:"Route day."},
+  {d:"24", dow:"Thu", tag:"Route day — everyone sleeps in Split."},
+  {d:"25", dow:"Fri", tag:"All routes: drive to Plitvice.", cls:"go"},
+  {d:"26", dow:"Sat", tag:"Park AM → Zagreb → 6 pm flight.", cls:"go"},
 ];
 
 /* photo helper data: {file, label} — Wikimedia Commons filenames */
@@ -666,6 +700,11 @@ const PH = {
   korcula:{file:"Korčula_Old_Town,_Croatia_(2024).jpg", label:"Korčula Town"},
   trogir:{file:"Seget_Donji_and_Trogir,_Croatia.jpg", label:"Trogir"},
   krka:{file:"National_park_Krka_skradinski_buk_3.JPG", label:"Krka · Skradinski Buk"},
+  mljet:{file:"Malo_jezero_(Mljet).JPG", label:"Mljet · the salt lakes"},
+  mljetislet:{file:"Sveta_Marija_Monastery,_Mljet,_Croatia.JPG", label:"St Mary's islet, Mljet"},
+  plitvice:{file:"Plitvice_Lakes,_Croatia,_Lower_Lakes_Panorama.JPG", label:"Plitvice · Lower Lakes"},
+  plitvice2:{file:"Wooden_Stairs_at_Plitvice_Lakes.jpg", label:"Plitvice boardwalks"},
+  rastoke:{file:"Slunj,_Rastoke,_waterfalls_of_the_Slunjcica_river.JPG", label:"Rastoke · watermill hamlet"},
 };
 
 /* coordinate helpers */
@@ -688,6 +727,16 @@ const FERRY_SPLIT_HVAR = [[43.5081,16.4402],[43.33,16.45],[43.1720,16.4410]];
 const VIA_A  = [[42.6407,18.1077],[42.8370,17.6990],[43.2970,17.0170],[43.4450,16.6890],[43.5081,16.4402]];
 const VIA_DS = [[42.6407,18.1077],[42.8370,17.6990],[43.5081,16.4402]];
 const VIA_C  = [[42.6407,18.1077],[42.8370,17.6990],[42.9750,17.1750]];
+const VIA_FINALE = [[43.5081,16.4402],[44.8807,15.6161],[45.1146,15.5866],[45.7429,16.0688]];
+
+/* the shared finale drive: Split → Plitvice → Rastoke → Zagreb airport (fallback line) */
+const FINALE_PTS = [
+  [43.5081,16.4402],[43.75,16.30],[44.03,16.20],[44.35,15.95],[44.60,15.78],
+  [44.8807,15.6161],[45.1146,15.5866],[45.35,15.60],[45.49,15.55],[45.7429,16.0688]
+];
+/* route D ferry legs */
+const FERRY_DBV_MLJET = [[42.6407,18.1077],[42.70,17.82],[42.7886,17.3444]];
+const FERRY_DBV_KOR = [[42.6407,18.1077],[42.72,17.75],[42.86,17.35],[42.9610,17.1360]];
 
 const MC = {start:"#C2592C", end:"#0B3C5D", city:"#1D6A96", view:"#9C5A2A", swim:"#3F9CA8", gem:"#6E5A8E"};
 
@@ -711,38 +760,56 @@ const OPENING = {
       {pt:[42.6393,18.1086], label:"Buža (cliff swim)", color:MC.gem},
       {pt:[42.5614,18.2682], label:"Dubrovnik Airport (DBV)", color:MC.end, perm:true},
     ]
-  },
-  days:[
-    {d:"19", dow:"Fri · Sep", place:"Arrive Dubrovnik", note:"You land this morning. Friend ① may join today; the rest of the crew is still coming.",
+  }
+};
+
+/* Dubrovnik opening days — shared by routes A, B and C */
+const OPEN_ABC = [
+    {d:"19", dow:"Sat · Sep", place:"Arrive Dubrovnik", note:"You land this morning. Friend ① may join today; the last of the crew comes Monday.",
      slots:[
        {when:"Morning", c:"logi", t:"Land at <b>Dubrovnik (DBV)</b>. Take a transfer or the airport bus into town — <b>don't rent a car yet</b> (the Old Town has a heavily fined no-drive zone). Base just outside the walls in <b>Ploče</b> or leafy <b>Lapad</b> and drop your bags."},
        {when:"Afternoon", c:"history", t:"First walk into the Old Town with zero agenda — the marble <b>Stradun</b>, the stepped side lanes, the Old Port. Peek into the Franciscan monastery's centuries-old pharmacy. If it's warm, a first dip off the rocks."},
        {when:"Evening", c:"food", t:"Easy welcome dinner at <b>Lokanda Peskarija</b> on the old harbor, or a homey konoba. Linger — once the cruise crowds clear out around dusk, the lamplit Stradun is the best version of the city."},
      ]},
-    {d:"20", dow:"Sat · Sep", place:"Your adventure day", note:"Still a small group — perfect for the things that are easier without the whole crew.",
+    {d:"20", dow:"Sun · Sep", place:"Your adventure day", note:"Still a small group — perfect for the things that are easier without the whole crew.",
      slots:[
        {when:"Morning", c:"view", t:"Up <b>Mount Srđ</b> (1,352 ft) for the definitive view over the red roofs and the Adriatic. Your pick of ways up: the zig-zag <b>Way of the Cross</b> trail (~1 hr on foot), the <b>cable car</b> (~4 min), or a taxi/bus — and come down however you like. <span style='color:#6b7780'>(If you're running, this is your hill.)</span>"},
        {when:"Afternoon", c:"swim", m:"boat", t:"Down to the water. Two car-free favorites: the 15-min boat to <b>Lokrum</b> (shaded paths, a little saltwater swimming lake, free-roaming peacocks, rocky coves), or the ferry out to the <b>Elaphiti Islands</b>."},
        {when:"Evening", c:"gem", t:"Sunset drink at a <b>Buža</b> bar — a hole in the seaward wall with tables out on the cliffs — then a relaxed dinner in the lanes."},
      ]},
-    {d:"21", dow:"Sun · Sep", place:"The crew's complete", note:"Friend ② arrives today. Time the big walk for before they land, or save it to do together.",
+    {d:"21", dow:"Mon · Sep", place:"The crew's complete", note:"Friend ② arrives today. Time the big walk for before they land, or save it to do together.",
      slots:[
        {when:"Morning", c:"history", t:"Walk the full <b>City Walls</b> loop early — about <b>1.2 mi</b> around the top, up to <b>80 ft</b> above the sea — before the heat and the day-trippers. It's the signature Dubrovnik thing and best right at opening."},
        {when:"Afternoon", c:"swim", t:"Collect everyone for a low-key afternoon: a quick swim, coffee in the shade, your favorite corners shown off to the newcomers. First-timers can ride the cable car up for the view."},
-       {when:"Evening", c:"food", t:"Group welcome dinner somewhere lively and local — then map out the drive north over a bottle of Pelješac red."},
+       {when:"Evening", c:"food", t:"Group welcome dinner somewhere lively and local — then settle the route north over a bottle of Pelješac red."},
      ]},
-  ]
-};
+];
 
-/* ---- the three roads north ---- */
+/* the shared Plitvice finale — Sept 25–26 on every route */
+const FINALE = [
+  {d:"25", dow:"Fri · Sep", place:"North to the lakes", note:"Every route funnels here: an easy Split morning, then the drive up to Plitvice.",
+   slots:[
+     {when:"Morning", c:"view", m:"foot", t:"Easy Split send-off — a gentle <b>Marjan</b> stroll or one last graze through the <b>Pazar</b> market. Late morning, collect the <b>rental car</b> (boat crews rent here; drivers already have theirs)."},
+     {when:"Afternoon", c:"logi", m:"car", t:"Drive north ~<b>155 mi</b> on the A1 (~2.5–3 hrs). Optional breaks: <b>Trogir</b>'s tiny islet old town, or <b>Krka</b>'s Skradinski Buk boardwalks (+1–2 hrs). Aim to land mid-to-late afternoon."},
+     {when:"Evening", c:"gem", t:"Settle into a guesthouse near <b>Entrance 2</b> (or Hotel Jezero inside the park). Dinner nearby and a short leg-stretch if there's light — with a layer on: the park sits at ~2,000 ft."},
+   ]},
+  {d:"26", dow:"Sat · Sep", place:"Plitvice, then the flight home", note:"Timed-entry tickets booked well ahead; boots on early.",
+   slots:[
+     {when:"Morning", c:"view", m:"foot", t:"<b>Plitvice Lakes</b> — 16 terraced lakes stitched together by boardwalks. Do the Lower Lakes to <b>Veliki Slap</b> (Croatia's tallest waterfall, ~256 ft), ride the <b>boat across Lake Kozjak</b>, then as much of the Upper Lakes as the clock allows (4–5 hrs is a solid visit). No swimming — it's a UNESCO park."},
+     {when:"Afternoon", c:"logi", m:"car", t:"Roll out early-to-mid afternoon for the ~<b>85 mi</b> to Zagreb (~2 hrs). Worth a 30-minute stop at <b>Rastoke</b>, the watermill hamlet where the Slunjčica spills into the Korana — a pocket-sized Plitvice."},
+     {when:"Evening", c:"logi", t:"Drop the car at <b>Zagreb Airport (ZAG)</b> and catch the <b>6 pm flight to Berlin</b>."},
+   ]},
+];
+
+/* ---- the four roads north ---- */
 const ROUTES = {
   A:{
-    letter:"A", name:"Mountains & Coast", best:true,
-    theme:"The coast road north — one big lookout at Biokovo, a fort over the Cetina at Omiš, finishing in Split.",
-    route:"Dubrovnik → Makarska → Omiš → Split", fly:"In DBV · Out SPU",
-    transport:"🚗 Needs a car — one-way rental",
-    tags:["Best fit","The coast drive","One big lookout","2 bases"],
-    strip:["Dubrovnik","Ston","Makarska","Omiš","Split"],
+    letter:"A", name:"Mountains & Coast", best:false,
+    theme:"The coast road north — one big lookout at Biokovo, a fort over the Cetina at Omiš — then Split and the lakes.",
+    route:"Dubrovnik → Makarska → Omiš → Split → Plitvice → Zagreb", fly:"In DBV · Out ZAG",
+    transport:"🚗 Car the whole way — one-way DBV → ZAG",
+    tags:["The driver's trip","Biokovo lookout","The coast drive","2 coastal bases"],
+    strip:["Dubrovnik","Makarska","Omiš","Split","Plitvice"],
     photos:["ston","peljesac","makarska","biokovo","omis","split"],
     map:{
       center:[43.05,17.30], zoom:9, fit:true,
@@ -759,41 +826,35 @@ const ROUTES = {
       ]
     },
     callout:{ic:"⛰️", k:"The one big lookout", title:"Biokovo · Sveti Jure, 5,781 ft", p:"Croatia's 2nd-highest peak, straight up behind Makarska. Drive the timed-entry mountain road to the glass Skywalk at 4,029 ft and on toward the summit, with short steep walks at the top — or hike it from the sea if your legs are willing. Save it for a clear, settled morning; this is the view you came north for."},
-    days:[
-      {d:"22", dow:"Mon · Sep", place:"The coast road north", note:"Collect the car and make the drive the day, not a transfer.",
+    days:OPEN_ABC.concat([
+      {d:"22", dow:"Tue · Sep", place:"The coast road north", note:"Collect the car and make the drive the day, not a transfer.",
        slots:[
-         {when:"Morning", c:"logi", m:"car", t:"Pick up the <b>one-way rental</b> on your way out of Dubrovnik. Head up the coast toward the Pelješac peninsula — about <b>137 mi</b> total to Split, so take it slow."},
+         {when:"Morning", c:"logi", m:"car", t:"Pick up the <b>one-way rental</b> on your way out of Dubrovnik (you'll drop it at Zagreb airport on the 26th). Head up the coast toward the Pelješac peninsula — about <b>137 mi</b> to Split, so take it slow."},
          {when:"Afternoon", c:"history", t:"Stop in <b>Ston</b> to walk a stretch of its <b>4-mi</b> defensive walls, then eat oysters pulled straight from the bay in <b>Mali Ston</b>. Cross the <b>Pelješac Bridge</b> (opened 2022 — no more Bosnia border) and roll into <b>Makarska</b>."},
          {when:"Evening", c:"food", t:"Seafront dinner in Makarska — grilled fish or a <b>brudet</b> (Dalmatian fish stew) at a no-frills konoba."},
        ]},
-      {d:"23", dow:"Tue · Sep", place:"Biokovo, the big view", note:"The reason the route bends here. Go on a clear morning.",
+      {d:"23", dow:"Wed · Sep", place:"Biokovo, the big view", note:"The reason the route bends here. Go on a clear morning.",
        slots:[
          {when:"Morning", c:"view", m:"car", t:"Up <b>Biokovo</b>. Drive the timed-entry road to the glass <b>Skywalk</b> (4,029 ft) and on toward <b>Sveti Jure</b> (5,781 ft), with short steep walks at the top. Strong hikers can climb from the sea; everyone else drives most of it."},
          {when:"Afternoon", c:"swim", t:"Back to sea level and into the water — the Makarska Riviera's prettiest pebble coves are at <b>Brela</b> and <b>Tučepi</b>. Easy, warm, low-70s°F swimming."},
          {when:"Evening", c:"food", t:"Order a <b>peka</b> ahead (meat or octopus slow-roasted under an iron bell — needs ~3 hrs) for a proper post-mountain feast."},
        ]},
-      {d:"24", dow:"Wed · Sep", place:"Omiš, then into Split", note:"One last fort, then a living Roman palace.",
+      {d:"24", dow:"Thu · Sep", place:"Omiš, then into Split", note:"One last fort, then a living Roman palace.",
        slots:[
          {when:"Morning", c:"view", m:"car", t:"Short drive to <b>Omiš</b>, where the Cetina River cuts to the sea. Climb to the <b>Starigrad/Fortica</b> fort above the canyon (a 2–3 hr loop, 994 ft) or the quick 15-min <b>Mirabela</b> in town. Adrenaline option: a via ferrata or a river zipline."},
          {when:"Afternoon", c:"history", t:"On to <b>Split</b>; drop the car and walk straight into <b>Diocletian's Palace</b> — a 1,700-year-old Roman palace that's still a living neighborhood. The Peristyle, the bell tower, the palm-lined Riva."},
          {when:"Evening", c:"food", t:"Dinner in the <b>Varoš</b> lanes — Konoba Fetivi or Konoba Varoš for pašticada (slow beef) and black cuttlefish risotto."},
        ]},
-      {d:"25", dow:"Thu · Sep", place:"Split, then home", note:"Slow morning, evening flight.",
-       slots:[
-         {when:"Morning", c:"view", t:"Gentle <b>Marjan</b> loop — the pine hill over town with island views (paved paths and stairs; walk or jog). Or just a long market-and-coffee morning if legs are tired."},
-         {when:"Afternoon", c:"food", t:"Graze the <b>Pazar</b> green market and the fish market by the palace walls; a last seafood lunch; coffee on the Riva like a local."},
-         {when:"Evening", c:"logi", t:"<b>Split Airport (SPU)</b> is ~16 mi west, about 30 min. Fly out in the evening."},
-       ]},
-    ]
+    ], FINALE),
   },
 
   B:{
     letter:"B", name:"Central Dalmatia & Islands", best:false,
     theme:"Less mountain, more water. Drive to Split, then catamaran out to Brač's golden-horn beach (Hvar an easy swap).",
-    route:"Dubrovnik → Split → Brač / Hvar", fly:"In DBV · Out SPU",
-    transport:"🚗→⛴ Car or car-free — drive or boat to Split, then ferries",
-    tags:["Most swimming","Island time","Least driving","Ferry-led"],
-    strip:["Dubrovnik","Split","Brač","Split"],
+    route:"Dubrovnik → Split → Brač / Hvar → Plitvice → Zagreb", fly:"In DBV · Out ZAG",
+    transport:"🚗/⛴ Drive or boat the middle — car for the finale",
+    tags:["Most swimming","Island time","Ferry-led","Golden horn"],
+    strip:["Dubrovnik","Split","Brač","Plitvice"],
     photos:["trogir","split","zlatnirat","vidova","hvar","krka"],
     map:{
       center:[43.30,16.70], zoom:9, fit:true,
@@ -805,7 +866,7 @@ const ROUTES = {
       markers:[
         {pt:[42.6407,18.1077], label:"Dubrovnik", color:MC.start, perm:true},
         {pt:[43.5150,16.2510], label:"Trogir", color:MC.city},
-        {pt:[43.806,15.964], label:"Krka (alt day)", color:MC.gem},
+        {pt:[43.806,15.964], label:"Krka · stop on the drive north", color:MC.gem},
         {pt:[43.5081,16.4402], label:"Split", color:MC.end, perm:true},
         {pt:[43.2620,16.6540], label:"Bol · Zlatni Rat", color:MC.swim, perm:true},
         {pt:[43.2790,16.6300], label:"Vidova Gora · 2,552 ft", color:MC.view},
@@ -813,41 +874,35 @@ const ROUTES = {
       ]
     },
     callout:{ic:"🏖️", k:"The headline", title:"Zlatni Rat & the view above it", p:"Brač's golden horn shifts shape with the wind and has the best swimming of the trip — smooth pebbles, clear low-70s°F water. Then climb (or drive) Vidova Gora, the highest point of any Adriatic island, standing on the cliff directly above the spit with Hvar and the mainland laid out beyond."},
-    days:[
-      {d:"22", dow:"Mon · Sep", place:"South coast to Split", note:"Same gorgeous shoreline as Route A, with a UNESCO stop.",
+    days:OPEN_ABC.concat([
+      {d:"22", dow:"Tue · Sep", place:"South coast to Split", note:"Same gorgeous shoreline as Route A, with a UNESCO stop.",
        slots:[
          {when:"Morning", c:"logi", m:"car", t:"Collect the one-way car and drive the coast north (~137 mi). <b>Ston</b> oysters and the <b>Pelješac Bridge</b> make a good lunch stop on the way."},
          {when:"Afternoon", c:"history", t:"Pull into <b>Trogir</b> — a tiny UNESCO-listed stone town on its own islet, with a knockout Romanesque cathedral portal. Then the short hop to <b>Split</b>; drop the car (you'll go by ferry from here)."},
          {when:"Evening", c:"food", t:"Settle into Split — Riva stroll and great-value seafood at <b>Konoba Matejuška</b> by the fishing harbor."},
        ]},
-      {d:"23", dow:"Tue · Sep", place:"Brač & the golden horn", note:"A short hop to the island and its famous spit.",
+      {d:"23", dow:"Wed · Sep", place:"Brač & the golden horn", note:"A short hop to the island and its famous spit.",
        slots:[
          {when:"Morning", c:"swim", m:"boat", t:"Catamaran to <b>Bol</b> on Brač (~1 hr). Drop bags and walk out to <b>Zlatni Rat</b>, the famous shape-shifting pebble spit — easily the best swimming on the trip."},
          {when:"Afternoon", c:"view", t:"Up <b>Vidova Gora</b> (2,552 ft), the highest point of any Adriatic island, on the cliff right above the spit. Drive, taxi, or hike (~6.6 mi round-trip from Bol); the view reaches Hvar and the mainland."},
          {when:"Evening", c:"food", t:"Bol's konobas and Brač olive oil; an easy island night. <span style='color:#6b7780'>(Prefer the buzz? Swap Brač for Hvar Town.)</span>"},
        ]},
-      {d:"24", dow:"Wed · Sep", place:"Island morning, back to Split", note:"One more swim, then reclaim the city.",
+      {d:"24", dow:"Thu · Sep", place:"Island morning, back to Split", note:"One more swim, then reclaim the city.",
        slots:[
          {when:"Morning", c:"gem", t:"A slow island morning — another swim at Zlatni Rat, or poke into <b>Pučišća</b>, home of Brač's famous stone-carving school."},
          {when:"Afternoon", c:"logi", m:"boat", t:"Catamaran back to <b>Split</b> in the afternoon. Climb the cathedral bell tower, wander the palace cellars, regroup."},
          {when:"Evening", c:"food", t:"Dinner at tiny, local <b>Villa Spiža</b> or the konobas of Varoš; a nightcap on a palace square."},
        ]},
-      {d:"25", dow:"Thu · Sep", place:"Split, then home", note:"Slow morning, evening flight.",
-       slots:[
-         {when:"Morning", c:"view", t:"<b>Marjan</b> loop for one last island view, or a calm market morning."},
-         {when:"Afternoon", c:"food", t:"Graze the <b>Pazar</b> market, a final seafood lunch, Riva coffee."},
-         {when:"Evening", c:"logi", t:"<b>Split Airport</b> (~16 mi west) for the evening flight. <span style='color:#6b7780'>Swap idea: trade an island day for Šibenik's stone cathedral + Krka's waterfalls by car.</span>"},
-       ]},
-    ]
+    ], FINALE),
   },
 
   C:{
     letter:"C", name:"Southern Slow Road", best:false,
     theme:"Food, wine and one beautiful little walled town. Korčula by boat, then on to Split. Gentlest on the legs.",
-    route:"Dubrovnik → Korčula → Split", fly:"In DBV · Out SPU",
-    transport:"⛴ Car-free option — catamarans the whole way",
+    route:"Dubrovnik → Korčula → Split → Plitvice → Zagreb", fly:"In DBV · Out ZAG",
+    transport:"⛴ Boats till Split — car only for the finale",
     tags:["Food & wine","Most relaxed","Easy on the legs","Korčula"],
-    strip:["Dubrovnik","Korčula","Split"],
+    strip:["Dubrovnik","Korčula","Split","Plitvice"],
     photos:["ston","korcula","peljesac","split"],
     map:{
       center:[43.00,17.30], zoom:9, fit:true,
@@ -867,32 +922,90 @@ const ROUTES = {
       ]
     },
     callout:{ic:"🍷", k:"The headline", title:"Korčula Town & island wine", p:"A miniature walled city on a peninsula, its lanes laid out in a herringbone 'fishbone' to break the wind — Marco Polo lore, Venetian stone, and a fraction of Dubrovnik's crowds. Pair it with the island's whites: Pošip everywhere, and the rare Grk that grows only around Lumbarda."},
-    days:[
-      {d:"22", dow:"Mon · Sep", place:"Slow road to Korčula", note:"The gourmet way across, by car and a short ferry.",
+    days:OPEN_ABC.concat([
+      {d:"22", dow:"Tue · Sep", place:"Slow road to Korčula", note:"The gourmet way across, by car and a short ferry.",
        slots:[
          {when:"Morning", c:"logi", m:"either", t:"The gourmet way: a one-way car up the coast, with oysters in <b>Ston</b> and a taste of <b>Pelješac's</b> big reds (Dingač, Postup) along the peninsula. The short <b>Orebić car-ferry</b> drops you on Korčula. <span style='color:#6b7780'>(Or skip the car entirely and take the foot-passenger catamaran straight from Dubrovnik.)</span>"},
          {when:"Afternoon", c:"history", t:"Arrive <b>Korčula Town</b> — the little 'fishbone' walled city. Wander the Venetian lanes, climb St Mark's tower, and feel how much quieter it is than Dubrovnik."},
          {when:"Evening", c:"food", t:"Local seafood and a bottle of <b>Pošip</b>. One splurge option: <b>LD Restaurant</b> for a harborside tasting menu — the trip's single fine-dining night, if you want one."},
        ]},
-      {d:"23", dow:"Tue · Sep", place:"Wine & coves", note:"A deliberately low-mileage day.",
+      {d:"23", dow:"Wed · Sep", place:"Wine & coves", note:"A deliberately low-mileage day.",
        slots:[
          {when:"Morning", c:"gem", t:"Out to <b>Lumbarda</b> at the island's tip — sandy <b>Vela Pržina</b> beach and the only place the rare <b>Grk</b> grape grows."},
          {when:"Afternoon", c:"swim", t:"Taste at small family wineries (<b>Toreta</b>, <b>Bire</b>), then a swim at a quiet cove — <b>Pupnatska Luka</b> is the pretty one. Gentle by design."},
          {when:"Evening", c:"food", t:"Back in Korčula Town for grilled fish and Pošip on a candlelit lane."},
        ]},
-      {d:"24", dow:"Wed · Sep", place:"Across to Split", note:"A morning on Korčula, then the boat north.",
+      {d:"24", dow:"Thu · Sep", place:"Across to Split", note:"A morning on Korčula, then the boat north.",
        slots:[
          {when:"Morning", c:"history", t:"A slow Korčula morning — the cathedral tower, an espresso on the walls — before the boat."},
          {when:"Afternoon", c:"logi", m:"boat", t:"Catamaran to <b>Split</b> (some lines call at Hvar or Brač en route). Into <b>Diocletian's Palace</b> for the afternoon."},
          {when:"Evening", c:"food", t:"<b>Konoba Varoš</b> or <b>Fetivi</b> for classic Dalmatian; plan a last Pazar-market graze for the morning."},
        ]},
-      {d:"25", dow:"Thu · Sep", place:"Split, then home", note:"Slow morning, evening flight.",
+    ], FINALE),
+  },
+
+  D:{
+    letter:"D", name:"Islands & Lakes", best:true,
+    theme:"Mljet's lake-park first — while the crew trickles in — then Dubrovnik, Korčula and Split by ferry, and the Plitvice finish.",
+    route:"Dubrovnik → Mljet → Dubrovnik → Korčula → Split → Plitvice → Zagreb", fly:"In DBV · Out ZAG",
+    transport:"⛴ Ferry-hop to Split — 2-day rental to finish",
+    tags:["Recommended","Fits the arrivals","Car-free till Split","2 islands + the lakes"],
+    strip:["Mljet","Dubrovnik","Korčula","Split","Plitvice"],
+    photos:["mljet","mljetislet","dubrovnik","lopud","korcula","split","plitvice"],
+    map:{
+      center:[43.0,17.2], zoom:9, fit:true,
+      routes:[
+        {pts:FERRY_DBV_MLJET, color:"#3E7C63", weight:4, dash:"7 8"},
+        {pts:FERRY_DBV_KOR, color:"#3E7C63", weight:3, dash:"7 8"},
+        {pts:FERRY_KOR_SPLIT, color:"#3E7C63", weight:3, dash:"7 8"},
+      ],
+      markers:[
+        {pt:[42.6407,18.1077], label:"Dubrovnik", color:MC.start, perm:true},
+        {pt:[42.7886,17.3444], label:"Mljet · Pomena", color:MC.swim, perm:true},
+        {pt:[42.7903,17.3766], label:"Polače", color:MC.swim},
+        {pt:[42.9610,17.1360], label:"Korčula", color:MC.gem, perm:true},
+        {pt:[43.5081,16.4402], label:"Split", color:MC.end, perm:true},
+      ]
+    },
+    callout:{ic:"🏝️", k:"Why it's the pick", title:"An island head start, a lakes finish", p:"Mljet fills the quiet solo window with the trip's calmest corner — a national park of saltwater lakes with a 12th-century monastery islet, done by bike and boat. You're back on Dubrovnik's dock at lunchtime Monday just as the last friend lands, the ferries do the sightseeing all the way to Split, and the Saturday flight out of Zagreb buys Plitvice with zero backtracking."},
+    days:[
+      {d:"19", dow:"Sat · Sep", place:"Land, then straight to Mljet", note:"Your solo window starts on an island. Friend ① rides along or meets you in Dubrovnik Monday.",
        slots:[
-         {when:"Morning", c:"view", t:"Easy <b>Marjan</b> loop or a market morning."},
-         {when:"Afternoon", c:"food", t:"Final seafront lunch and Riva coffee."},
-         {when:"Evening", c:"logi", t:"<b>Split Airport</b> for the evening flight home. <span style='color:#6b7780'>Note: the Korčula→Split catamaran is foot-passenger only — go car-free from the start, or return the rental before the island.</span>"},
+         {when:"Morning", c:"logi", t:"Land at <b>Dubrovnik (DBV)</b> Saturday morning. No car on this route until Split — head for the port, stash the bags, easy waterfront lunch."},
+         {when:"Afternoon", c:"logi", m:"boat", t:"Catamaran to <b>Mljet</b> (~1.5 hrs) — to <b>Pomena</b> or <b>Polače</b>, so match the port to your lodging. One to three sailings a day in September; book ahead."},
+         {when:"Evening", c:"food", t:"Settle into the sleepy port village. Grilled fish a few steps from the water — the island empties beautifully once the day boats leave."},
        ]},
-    ]
+      {d:"20", dow:"Sun · Sep", place:"Mljet's lakes", note:"A national park covers the island's western end: two saltwater lakes, a monastery islet, pine forest everywhere.",
+       slots:[
+         {when:"Morning", c:"view", m:"foot", t:"Walk or bike up <b>Montokuc</b> (~830 ft) for the classic view over both lakes. Feeling ambitious? <b>Veliki Grad</b> (1,686 ft) is the island's roof. <span style='color:#6b7780'>(If you're running, this is the morning for it.)</span>"},
+         {when:"Afternoon", c:"swim", m:"boat", t:"Swim the warm, salty lakes (<b>Mali most</b> is the classic spot), then ride the park boat — included in the ticket — to <b>St Mary's islet</b> and its 12th-century monastery. Bikes loop <b>Veliko jezero</b> in an easy hour."},
+         {when:"Evening", c:"gem", t:"Sunset on the shore, dinner in the village. Two nights on a near-empty island is the whole point of going first."},
+       ]},
+      {d:"21", dow:"Mon · Sep", place:"Back to Dubrovnik — crew's complete", note:"The ~11:10 boat from Pomena lands you at ~12:30, right as friend ② arrives.",
+       slots:[
+         {when:"Morning", c:"logi", m:"boat", t:"Late-morning catamaran back to <b>Dubrovnik</b> (Pomena ~11:10 → ~12:30–12:45 — confirm exact times when booking). Check into the Dubrovnik base, just outside the walls in <b>Ploče</b> or <b>Lapad</b>."},
+         {when:"Afternoon", c:"history", t:"First pass at the Old Town — the marble <b>Stradun</b>, the stepped side lanes, part of the <b>Walls</b> if energy allows (or save the full circuit for tomorrow's early start)."},
+         {when:"Evening", c:"food", t:"Friend ② lands today: first full-crew dinner. <b>Lokanda Peskarija</b> on the old harbor is the easy call — and the lamplit Stradun after the day-trippers leave is the best version of the city."},
+       ]},
+      {d:"22", dow:"Tue · Sep", place:"Dubrovnik & an island afternoon", note:"Walls early, water after.",
+       slots:[
+         {when:"Morning", c:"history", m:"foot", t:"The full <b>City Walls</b> circuit right at opening (~1.2 mi around the top, up to ~80 ft above the sea) — or the <b>Srđ</b> lookout by trail, cable car or bus."},
+         {when:"Afternoon", c:"swim", m:"boat", t:"Boat afternoon: <b>Lokrum</b>'s coves and little swimming lake, or the car-free <b>Elaphiti</b> (Lopud's sandy <b>Šunj</b>). Easy round trips from the old harbor."},
+         {when:"Evening", c:"gem", t:"Sunset drink at a <b>Buža</b> cliff bar — a hole in the seaward wall with tables on the rocks — then dinner in the lanes."},
+       ]},
+      {d:"23", dow:"Wed · Sep", place:"Ferry to Korčula", note:"Two hours down the channel to Croatia's loveliest small walled town.",
+       slots:[
+         {when:"Morning", c:"logi", m:"boat", t:"Catamaran <b>Dubrovnik → Korčula</b> (~2 hrs)."},
+         {when:"Afternoon", c:"history", t:"<b>Korčula Town</b> — a miniature walled city on a peninsula, lanes laid out in a herringbone 'fishbone' to break the wind. St Mark's tower, Venetian palaces, Marco Polo lore, a fraction of Dubrovnik's crowds."},
+         {when:"Evening", c:"food", t:"Island whites with dinner — <b>Pošip</b>, or the rare <b>Grk</b> grown only around Lumbarda. If the trip gets one splurge, <b>LD Restaurant</b> on the walls is it."},
+       ]},
+      {d:"24", dow:"Thu · Sep", place:"Sail to Split", note:"The prettiest transfer of the trip — then a Roman palace.",
+       slots:[
+         {when:"Morning", c:"logi", m:"boat", t:"Catamaran <b>Korčula → Split</b> (~2.5–3 hrs; some sailings call at Hvar or Brač — a sightseeing cruise in itself)."},
+         {when:"Afternoon", c:"history", t:"<b>Diocletian's Palace</b> — a 1,700-year-old Roman palace that's still a living neighborhood — the Peristyle, the bell tower, the palm-lined <b>Riva</b>."},
+         {when:"Evening", c:"food", t:"Konoba dinner in the <b>Varoš</b> lanes — Fetivi or Varoš for pašticada and black risotto. Everyone's in Split tonight, whichever route they took."},
+       ]},
+    ].concat(FINALE),
   },
 };
 
@@ -980,15 +1093,9 @@ document.getElementById("food-grid").innerHTML = FOOD.map(function(f){
   return '<div class="food"><div class="where">'+f.where+'</div><h4>'+f.h+'</h4><p>'+f.p+'</p></div>';
 }).join("");
 
-/* ---- opening ---- */
+/* ---- shared galleries ---- */
 document.getElementById("gal-opening").innerHTML = galleryHTML(OPENING.photos);
-(function(){
-  const bar = document.querySelector('.lens-bar[data-scope="opening"]');
-  bar.insertAdjacentHTML("beforeend", lensChipsHTML());
-  const daysEl = document.getElementById("days-opening");
-  renderDays(daysEl, OPENING.days);
-  wireLens(bar, daysEl);
-})();
+document.getElementById("gal-finale").innerHTML = galleryHTML(["plitvice","plitvice2","rastoke","krka"]);
 
 /* =========================================================
    MAPS (Leaflet)
@@ -1054,7 +1161,7 @@ function buildMap(id, cfg){
 function buildStaticMaps(){
   buildMap("map-opening", OPENING.map);
   buildMap("map-overview", {
-    center:[43.10,17.30], zoom:8, fit:true,
+    center:[43.90,16.50], zoom:8, fit:true,
     routes:[
       {pts:COAST, road:true, via:VIA_A, color:"#C2592C", weight:4},
       {pts:C_TO_OREBIC, road:true, via:VIA_C, color:"#6E5A8E", weight:3},
@@ -1062,16 +1169,36 @@ function buildStaticMaps(){
       {pts:FERRY_KOR_SPLIT, color:"#6E5A8E", weight:3, dash:"6 7"},
       {pts:FERRY_SPLIT_BOL, color:"#1D6A96", weight:3, dash:"7 8"},
       {pts:FERRY_SPLIT_HVAR, color:"#1D6A96", weight:3, dash:"7 8"},
+      {pts:FERRY_DBV_MLJET, color:"#3E7C63", weight:3.5, dash:"7 8"},
+      {pts:FERRY_DBV_KOR, color:"#3E7C63", weight:3, dash:"7 8"},
+      {pts:FINALE_PTS, road:true, via:VIA_FINALE, color:"#0B3C5D", weight:3.5},
     ],
     markers:[
       {pt:[42.6407,18.1077], label:"Dubrovnik · start", color:MC.start, perm:true},
+      {pt:[42.7886,17.3444], label:"Mljet", color:MC.swim, perm:true},
       {pt:[42.8370,17.6990], label:"Ston", color:MC.city},
       {pt:[42.9610,17.1360], label:"Korčula", color:MC.gem, perm:true},
       {pt:[43.2970,17.0170], label:"Makarska", color:MC.city, perm:true},
-      {pt:[43.2620,16.6540], label:"Bol · Brač", color:MC.swim, perm:true},
+      {pt:[43.2620,16.6540], label:"Bol · Brač", color:MC.swim},
       {pt:[43.1720,16.4410], label:"Hvar", color:MC.gem},
       {pt:[43.4450,16.6890], label:"Omiš", color:MC.city},
-      {pt:[43.5081,16.4402], label:"Split · finish", color:MC.end, perm:true},
+      {pt:[43.5081,16.4402], label:"Split · everyone, Sept 24", color:MC.end, perm:true},
+      {pt:[44.8807,15.6161], label:"Plitvice · everyone, Sept 25", color:MC.view, perm:true},
+      {pt:[45.7429,16.0688], label:"Zagreb Airport · fly home", color:MC.end, perm:true, dir:"left"},
+    ]
+  });
+  buildMap("map-finale", {
+    center:[44.60,15.90], zoom:8, fit:true,
+    routes:[
+      {pts:FINALE_PTS, road:true, via:VIA_FINALE, color:"#0B3C5D", weight:4},
+    ],
+    markers:[
+      {pt:[43.5081,16.4402], label:"Split · Fri morning", color:MC.start, perm:true},
+      {pt:[43.5150,16.2510], label:"Trogir (optional stop)", color:MC.city},
+      {pt:[43.806,15.964], label:"Krka · Skradinski Buk (optional stop)", color:MC.gem},
+      {pt:[44.8807,15.6161], label:"Plitvice Lakes · Fri night + Sat AM", color:MC.view, perm:true},
+      {pt:[45.1146,15.5866], label:"Rastoke (coffee stop)", color:MC.gem},
+      {pt:[45.7429,16.0688], label:"Zagreb Airport · Sat 6 pm flight", color:MC.end, perm:true, dir:"left"},
     ]
   });
 }
@@ -1080,14 +1207,14 @@ function buildStaticMaps(){
    ROUTE CARDS + DETAIL
    ========================================================= */
 const cardsEl = document.getElementById("cards");
-Object.keys(ROUTES).forEach(function(key){
+["D","A","B","C"].forEach(function(key){
   const d = ROUTES[key];
   const btn = document.createElement("button");
   btn.className = "card";
   btn.setAttribute("role","tab");
   btn.dataset.key = key;
   btn.innerHTML =
-    (d.best ? '<span class="badge">Best fit</span>' : '')
+    (d.best ? '<span class="badge">Recommended</span>' : '')
     + '<span class="card-strip">'+stripSVG(d.strip)+'</span>'
     + '<span class="card-body"><span class="card-letter">'+d.letter+'</span>'
     + '<span class="card-name">'+d.name+'</span>'
@@ -1126,11 +1253,11 @@ function renderRoute(key){
       + '<div class="strip-line">'+stripSVGlight(d.strip)+'</div></div>'
 
     + '<div class="map" id="map-route" role="img" aria-label="Map of Route '+d.letter+'"></div>'
-    + '<div class="map-note">Route '+d.letter+': '+d.route+'. Solid line follows the real roads (drive); dashed lines are ferry legs across open water.</div>'
+    + '<div class="map-note">Route '+d.letter+': '+d.route+'. Solid lines follow the real roads (drive); dashed lines are ferry legs. The shared Sept 25–26 finale (Split → Plitvice → Zagreb) is mapped in its own section below.</div>'
 
     + '<div class="gallery">'+galleryHTML(d.photos)+'</div>'
 
-    + '<div class="block-head"><h4>Day by day</h4><span class="sub">Sept 22–25 · morning · afternoon · evening</span></div>'
+    + '<div class="block-head"><h4>Day by day — the whole week</h4><span class="sub">Sept 19–26 · morning · afternoon · evening</span></div>'
     + '<div class="lens-bar" data-scope="route"><span class="lens-label">Highlight</span>'+lensChipsHTML()+'</div>'
     + '<div class="days" id="days-route"></div>'
 
@@ -1213,7 +1340,7 @@ function selectRoute(key){
 /* ---- init ---- */
 window.addEventListener("load", function(){
   buildStaticMaps();
-  selectRoute("A");
+  selectRoute("D");
 });
 </script>
 </body>
